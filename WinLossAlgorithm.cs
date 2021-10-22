@@ -8,5 +8,6 @@ namespace OWLSimGame
 {
     class WinLossAlgorithm
     {
+
     }
 }
