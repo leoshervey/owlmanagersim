@@ -24,5 +24,13 @@ namespace OWLSimGame
         {
             InitializeComponent();
         }
+
+
+        private void openPage(object sender, RoutedEventArgs e)
+        {
+            CareerPage secondWindow = new CareerPage();
+            secondWindow.Show();
+            this.Close();
+        }
     }
 }
