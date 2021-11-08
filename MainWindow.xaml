@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Button x:Name="enterGame" Content="Enter Game" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="200" Click="openPage" Margin="0,482,0,0"/>
 
