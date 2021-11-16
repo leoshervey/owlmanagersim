@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="CareerPage" Height="1080" Width="1920">
+        Title="CareerPage" Height="350" Width="525" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Button x:Name="closeGame" Content="Close Game" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="200" Click="closeWindow" Margin="0,597,0,0"/>
         <Button Content="Play Game" HorizontalAlignment="Center" Height="90" Margin="0,413,0,0" VerticalAlignment="Top" Width="200" Click="Button_Click"/>
