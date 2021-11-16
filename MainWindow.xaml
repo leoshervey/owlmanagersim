@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="1955" VerticalAlignment="Top" Width="2701" Margin="-28,0,0,0" Source="/testbackground2.jpg"/>
-        <Rectangle HorizontalAlignment="Center" Height="1064" Stroke="Black" VerticalAlignment="Center" Width="1922">
+        <Image HorizontalAlignment="Left" Height="1331" VerticalAlignment="Top" Width="1893" Margin="780,0,0,0" Source="/testbackground2.jpg"/>
+        <Rectangle HorizontalAlignment="Center" Height="828" Stroke="Black" VerticalAlignment="Center" Width="1586">
             <Rectangle.Fill>
                 <SolidColorBrush Color="Black" Opacity="1"/>
             </Rectangle.Fill>
