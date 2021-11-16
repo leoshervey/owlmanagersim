@@ -6,4 +6,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Overwatch_01.png.png" />
+    <None Remove="testbackground2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Overwatch_01.png.png" />
+    <Resource Include="testbackground2.jpg" />
+  </ItemGroup>
+
 </Project>
