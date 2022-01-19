@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" WindowStyle="None">
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="1331" VerticalAlignment="Top" Width="1893" Margin="780,0,0,0" Source="/testbackground2.jpg"/>
-        <Rectangle HorizontalAlignment="Center" Height="828" Stroke="Black" VerticalAlignment="Center" Width="1586">
+        <Image HorizontalAlignment="Left" Height="1775" VerticalAlignment="Top" Width="3061" Source="/testbackground2.jpg"/>
+        <Rectangle HorizontalAlignment="Left" Height="1232" Stroke="Black" VerticalAlignment="Top" Width="2142" Opacity="0.7" Margin="-100,-79,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="Black" Opacity="1"/>
             </Rectangle.Fill>
@@ -16,8 +16,9 @@
                 <SolidColorBrush Color="#FF060606" Opacity="0.7"/>
             </Rectangle.OpacityMask>
         </Rectangle>
-        <Button x:Name="enterGame" Content="Enter Game" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="724" Click="openPage" Margin="0,502,0,0" FontFamily="Lucida Fax" FontSize="36" Background="#FFCEB7A8" Foreground="#FFC95D14"/>
-        <Image HorizontalAlignment="Left" Height="401" Margin="742,71,0,0" VerticalAlignment="Top" Width="408" Source="/Overwatch_01.png.png"/>
+        <Button x:Name="enterGame" Content="Enter Game" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="724" Click="openPage" Margin="0,502,0,0" FontFamily="Koverwatch" FontSize="48" Background="#FFCEB7A8" Foreground="#FFC95D14"/>
+        <Image HorizontalAlignment="Left" Height="401" Margin="739,96,0,0" VerticalAlignment="Top" Width="514" Source="/Overwatch_01.png.png"/>
+        <Button x:Name="enterGame_Copy" Content="Exit" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="724" Click="closePage" Margin="0,610,0,0" FontFamily="Koverwatch" FontSize="48" Background="#FFCEB7A8" Foreground="#FFC95D14"/>
 
     </Grid>
 </Window>

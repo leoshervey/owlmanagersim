@@ -7,12 +7,52 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1024px-Philadelphia_Fusion_Jersey.svg.png" />
+    <None Remove="5246291-0002381718-Vs.pn.png" />
+    <None Remove="688px-Shanghai_Dragons_logo.png" />
+    <None Remove="background5.jpg" />
+    <None Remove="background6.jpg" />
+    <None Remove="background8.jpg" />
+    <None Remove="DPS.png" />
+    <None Remove="Icon-Ana.png" />
+    <None Remove="Icon-cassidy.png" />
+    <None Remove="Icon-Genji.png" />
+    <None Remove="Icon-Lúcio.png" />
+    <None Remove="Icon-portrait.0s4jW.png" />
+    <None Remove="LAVA A.png" />
+    <None Remove="LAVA H.png" />
+    <None Remove="LDN.png" />
+    <None Remove="LDNS H.png" />
     <None Remove="Overwatch_01.png.png" />
+    <None Remove="PHL.png" />
+    <None Remove="SupportIcon.png" />
+    <None Remove="TankIcon.png" />
+    <None Remove="testbackground.jpg" />
     <None Remove="testbackground2.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="1024px-Philadelphia_Fusion_Jersey.svg.png" />
+    <Resource Include="5246291-0002381718-Vs.pn.png" />
+    <Resource Include="688px-Shanghai_Dragons_logo.png" />
+    <Resource Include="background5.jpg" />
+    <Resource Include="background6.jpg" />
+    <Resource Include="background8.jpg" />
+    <Resource Include="DPS.png" />
+    <Resource Include="Icon-Ana.png" />
+    <Resource Include="Icon-cassidy.png" />
+    <Resource Include="Icon-Genji.png" />
+    <Resource Include="Icon-Lúcio.png" />
+    <Resource Include="Icon-portrait.0s4jW.png" />
+    <Resource Include="LAVA A.png" />
+    <Resource Include="LAVA H.png" />
+    <Resource Include="LDN.png" />
+    <Resource Include="LDNS H.png" />
     <Resource Include="Overwatch_01.png.png" />
+    <Resource Include="PHL.png" />
+    <Resource Include="SupportIcon.png" />
+    <Resource Include="TankIcon.png" />
+    <Resource Include="testbackground.jpg" />
     <Resource Include="testbackground2.jpg" />
   </ItemGroup>
 

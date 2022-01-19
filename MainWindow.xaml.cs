@@ -32,5 +32,10 @@ namespace OWLSimGame
             secondWindow.Show();
             this.Close();
         }
+
+        private void closePage(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

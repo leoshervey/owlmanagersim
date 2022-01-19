@@ -1,0 +1,48 @@
+﻿<Window x:Class="OWLSimGame.TacticsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OWLSimGame"
+        mc:Ignorable="d"
+        Title="TacticsPage" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0.037"/>
+                <GradientStop Color="#FF0C0440" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="1018" Margin="770,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="1118">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF125C6E" Offset="0.113"/>
+                    <GradientStop Color="#FF023946" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image HorizontalAlignment="Left" Height="114" Margin="816,264,0,0" VerticalAlignment="Top" Width="126" Source="/Icon-cassidy.png" Stretch="Uniform"/>
+        <Image HorizontalAlignment="Left" Height="114" Margin="1026,264,0,0" VerticalAlignment="Top" Width="126" Source="/Icon-Genji.png" Stretch="Uniform"/>
+        <Image HorizontalAlignment="Left" Height="114" Margin="1266,264,0,0" VerticalAlignment="Top" Width="126" Source="/Icon-portrait.0s4jW.png" Stretch="Uniform"/>
+        <Image HorizontalAlignment="Left" Height="114" Margin="1495,264,0,0" VerticalAlignment="Top" Width="126" Source="/Icon-Ana.png" Stretch="Uniform"/>
+        <Image HorizontalAlignment="Left" Height="114" Margin="1708,264,0,0" VerticalAlignment="Top" Width="126" Source="/Icon-Lúcio.png" Stretch="Uniform"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="816,382,0,0" Text="Player" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" FontFamily="Koverwatch" FontSize="36" TextAlignment="Center" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="1026,382,0,0" Text="Player" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" FontFamily="Koverwatch" FontSize="36" TextAlignment="Center" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="1266,382,0,0" Text="Player" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" FontFamily="Koverwatch" FontSize="36" TextAlignment="Center" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="1495,382,0,0" Text="Player" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" FontFamily="Koverwatch" FontSize="36" TextAlignment="Center" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="1708,383,0,0" Text="Player" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" FontFamily="Koverwatch" FontSize="36" TextAlignment="Center" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="857,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1067,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1307,200,0,0" VerticalAlignment="Top" Width="46" Source="/TankIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1536,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1749,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
+        <ListBox x:Name="Subsititues_List" HorizontalAlignment="Left" Height="442" Margin="816,540,0,0" VerticalAlignment="Top" Width="1018" Background="{x:Null}" FontFamily="Koverwatch" FontSize="36" SelectionChanged="ListBox_SelectionChanged" BorderBrush="Black"/>
+        <ListBox x:Name="Player_List" HorizontalAlignment="Left" Height="434" Margin="44,106,0,0" VerticalAlignment="Top" Width="236" Background="{x:Null}" BorderBrush="Black" FontFamily="Koverwatch" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Height="70" Margin="44,31,0,0" Text="Team Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Background="{x:Null}" FontFamily="Koverwatch" FontSize="72" TextAlignment="Center" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="teamStrength" HorizontalAlignment="Left" Height="48" Margin="816,72,0,0" Text="Team Strength: 73%" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Background="{x:Null}" TextAlignment="Center" FontFamily="Koverwatch" FontSize="48" Foreground="White" BorderBrush="{x:Null}"/>
+        <Button Content="Back&#xD;&#xA;" HorizontalAlignment="Left" Height="49" Margin="44,1000,0,0" VerticalAlignment="Top" Width="130" FontFamily="Koverwatch" FontSize="48" Click="Button_Click"/>
+        <ComboBox HorizontalAlignment="Left" Height="48" Margin="1536,72,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="ComboBox_SelectionChanged_1"/>
+        <TextBox HorizontalAlignment="Left" Height="70" Margin="1197,56,0,0" Text="Starting VI" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Background="{x:Null}" FontFamily="Koverwatch" FontSize="72" Foreground="White" BorderBrush="{x:Null}"/>
+
+    </Grid>
+</Window>
