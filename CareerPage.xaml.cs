@@ -26,7 +26,7 @@ namespace OWLSimGame
 
         private void closeWindow(object sender, RoutedEventArgs e)
         {
-            MainWindow win1 = new MainWindow();
+            CareerSelect win1 = new CareerSelect();
             win1.Show();
             this.Close();
         }

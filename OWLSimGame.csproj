@@ -10,10 +10,19 @@
     <None Remove="1024px-Philadelphia_Fusion_Jersey.svg.png" />
     <None Remove="5246291-0002381718-Vs.pn.png" />
     <None Remove="688px-Shanghai_Dragons_logo.png" />
+    <None Remove="ATL.png" />
     <None Remove="background5.jpg" />
     <None Remove="background6.jpg" />
     <None Remove="background8.jpg" />
+    <None Remove="background9.jpg" />
+    <None Remove="BST.png" />
+    <None Remove="CNG.png" />
+    <None Remove="DLS.png" />
     <None Remove="DPS.png" />
+    <None Remove="FLR.png" />
+    <None Remove="GNZ.png" />
+    <None Remove="HNZ.png" />
+    <None Remove="HOU.png" />
     <None Remove="Icon-Ana.png" />
     <None Remove="Icon-cassidy.png" />
     <None Remove="Icon-Genji.png" />
@@ -23,22 +32,41 @@
     <None Remove="LAVA H.png" />
     <None Remove="LDN.png" />
     <None Remove="LDNS H.png" />
+    <None Remove="LGL.png" />
+    <None Remove="LVA.png" />
+    <None Remove="NYE.png" />
     <None Remove="Overwatch_01.png.png" />
+    <None Remove="PAR.png" />
     <None Remove="PHL.png" />
+    <None Remove="SFS.png" />
+    <None Remove="SHD.png" />
+    <None Remove="SLD.png" />
     <None Remove="SupportIcon.png" />
     <None Remove="TankIcon.png" />
     <None Remove="testbackground.jpg" />
     <None Remove="testbackground2.jpg" />
+    <None Remove="TOR.png" />
+    <None Remove="VNC.png" />
+    <None Remove="WAS.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="1024px-Philadelphia_Fusion_Jersey.svg.png" />
     <Resource Include="5246291-0002381718-Vs.pn.png" />
     <Resource Include="688px-Shanghai_Dragons_logo.png" />
+    <Resource Include="ATL.png" />
     <Resource Include="background5.jpg" />
     <Resource Include="background6.jpg" />
     <Resource Include="background8.jpg" />
+    <Resource Include="background9.jpg" />
+    <Resource Include="BST.png" />
+    <Resource Include="CNG.png" />
+    <Resource Include="DLS.png" />
     <Resource Include="DPS.png" />
+    <Resource Include="FLR.png" />
+    <Resource Include="GNZ.png" />
+    <Resource Include="HNZ.png" />
+    <Resource Include="HOU.png" />
     <Resource Include="Icon-Ana.png" />
     <Resource Include="Icon-cassidy.png" />
     <Resource Include="Icon-Genji.png" />
@@ -48,12 +76,22 @@
     <Resource Include="LAVA H.png" />
     <Resource Include="LDN.png" />
     <Resource Include="LDNS H.png" />
+    <Resource Include="LGL.png" />
+    <Resource Include="LVA.png" />
+    <Resource Include="NYE.png" />
     <Resource Include="Overwatch_01.png.png" />
+    <Resource Include="PAR.png" />
     <Resource Include="PHL.png" />
+    <Resource Include="SFS.png" />
+    <Resource Include="SHD.png" />
+    <Resource Include="SLD.png" />
     <Resource Include="SupportIcon.png" />
     <Resource Include="TankIcon.png" />
     <Resource Include="testbackground.jpg" />
     <Resource Include="testbackground2.jpg" />
+    <Resource Include="TOR.png" />
+    <Resource Include="VNC.png" />
+    <Resource Include="WAS.png" />
   </ItemGroup>
 
 </Project>

@@ -13,7 +13,7 @@
                 <GradientStop Color="#FF9C1818" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="closeGame" Content="Exit" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="143" Click="closeWindow" Margin="30,1016,0,0" RenderTransformOrigin="0.5,0.5" FontSize="24">
+        <Button x:Name="closeGame" Content="Exit" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="143" Click="closeWindow" Margin="30,1016,0,0" RenderTransformOrigin="0.5,0.5" FontSize="24" FontFamily="Koverwatch">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

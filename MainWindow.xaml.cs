@@ -28,7 +28,7 @@ namespace OWLSimGame
 
         private void openPage(object sender, RoutedEventArgs e)
         {
-            CareerPage secondWindow = new CareerPage();
+            CareerSelect secondWindow = new CareerSelect();
             secondWindow.Show();
             this.Close();
         }
