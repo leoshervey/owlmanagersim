@@ -23,7 +23,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image HorizontalAlignment="Left" Height="100" Margin="806,32,0,0" VerticalAlignment="Top" Width="110" Source="/PHL.png">
+        <Image HorizontalAlignment="Left" Height="100" Margin="806,32,0,0" VerticalAlignment="Top" Width="110" Source="/ATL.png">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/testbackground2.jpg"/>
             </Image.OpacityMask>
@@ -34,7 +34,7 @@
                 <ImageBrush ImageSource="/testbackground2.jpg"/>
             </Image.OpacityMask>
         </Image>
-        <TextBox HorizontalAlignment="Center" Height="94" Margin="0,137,0,0" Text="Next Match&#xD;&#xA;[DATE]" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" TextChanged="TextBox_TextChanged_1" Background="{x:Null}" TextAlignment="Center" FontFamily="Koverwatch" FontSize="48" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="nextMatch" HorizontalAlignment="Center" Height="94" Margin="0,137,0,0" Text="Next Match&#xD;&#xA;[DATE]" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" TextChanged="TextBox_TextChanged_1" Background="{x:Null}" TextAlignment="Center" FontFamily="Koverwatch" FontSize="48" BorderBrush="{x:Null}"/>
         <Button Content="Advance -&gt;" HorizontalAlignment="Left" Height="82" Margin="1628,0,0,0" VerticalAlignment="Top" Width="292" FontFamily="Koverwatch" FontSize="36" Click="Button_Click_3"/>
         <TextBox HorizontalAlignment="Left" Height="52" Margin="1628,80,0,0" Text="Current Date" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" TextAlignment="Center" FontFamily="Koverwatch" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
         <Button Content="Tactics" HorizontalAlignment="Center" Height="610" Margin="0,268,0,0" VerticalAlignment="Top" Width="584" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_1" Foreground="White" BorderBrush="{x:Null}">
@@ -52,7 +52,7 @@
                 <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339" Source="/1024px-Philadelphia_Fusion_Jersey.svg.png"/>
+        <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339" Source="/Atlanta_Reign_Jersey.png"/>
 
     </Grid>
 </Window>

@@ -11,6 +11,7 @@
     <None Remove="5246291-0002381718-Vs.pn.png" />
     <None Remove="688px-Shanghai_Dragons_logo.png" />
     <None Remove="ATL.png" />
+    <None Remove="Atlanta_Reign_Jersey.png" />
     <None Remove="background5.jpg" />
     <None Remove="background6.jpg" />
     <None Remove="background8.jpg" />
@@ -51,10 +52,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="1024px-Philadelphia_Fusion_Jersey.svg.png" />
     <Resource Include="5246291-0002381718-Vs.pn.png" />
     <Resource Include="688px-Shanghai_Dragons_logo.png" />
     <Resource Include="ATL.png" />
+    <Resource Include="Atlanta_Reign_Jersey.png" />
     <Resource Include="background5.jpg" />
     <Resource Include="background6.jpg" />
     <Resource Include="background8.jpg" />
