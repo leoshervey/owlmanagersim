@@ -29,6 +29,26 @@
     <None Remove="Icon-Genji.png" />
     <None Remove="Icon-Lúcio.png" />
     <None Remove="Icon-portrait.0s4jW.png" />
+    <None Remove="jerseysTogether\Atlanta_Reign_Jersey.png" />
+    <None Remove="jerseysTogether\Boston_Uprising_Jersey.png" />
+    <None Remove="jerseysTogether\Chengdu_Hunters_Jersey.png" />
+    <None Remove="jerseysTogether\Dallas_Fuel_Jersey.png" />
+    <None Remove="jerseysTogether\Florida_Mayhem_Jersey.png" />
+    <None Remove="jerseysTogether\Guangzhou_Charge_Jersey.png" />
+    <None Remove="jerseysTogether\Hangzhou_Spark_Jersey.png" />
+    <None Remove="jerseysTogether\Houston_Outlaws_Jersey.png" />
+    <None Remove="jerseysTogether\London_Spitfire_Jersey.png" />
+    <None Remove="jerseysTogether\Los_Angeles_Gladiators_Jersey.png" />
+    <None Remove="jerseysTogether\Los_Angeles_Valiant_Jersey.png" />
+    <None Remove="jerseysTogether\New_York_Excelsior_Jersey.png" />
+    <None Remove="jerseysTogether\Paris_Eternal_Jersey.png" />
+    <None Remove="jerseysTogether\Philadelphia_Fusion_Jersey.png" />
+    <None Remove="jerseysTogether\San_Francisco_Shock_Jersey.png" />
+    <None Remove="jerseysTogether\Seoul_Dynasty_Jersey.png" />
+    <None Remove="jerseysTogether\Shanghai_Dragons_Jersey.png" />
+    <None Remove="jerseysTogether\Toronto_Defiant_Jersey.png" />
+    <None Remove="jerseysTogether\Vancouver_Titans_Jersey.png" />
+    <None Remove="jerseysTogether\Washington_Justice_Jersey.png" />
     <None Remove="LAVA A.png" />
     <None Remove="LAVA H.png" />
     <None Remove="LDN.png" />
@@ -78,6 +98,66 @@
     <Resource Include="Icon-Genji.png" />
     <Resource Include="Icon-Lúcio.png" />
     <Resource Include="Icon-portrait.0s4jW.png" />
+    <Resource Include="jerseysTogether\Atlanta_Reign_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Boston_Uprising_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Chengdu_Hunters_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Dallas_Fuel_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Florida_Mayhem_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Guangzhou_Charge_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Hangzhou_Spark_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Houston_Outlaws_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\London_Spitfire_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Los_Angeles_Gladiators_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Los_Angeles_Valiant_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\New_York_Excelsior_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Paris_Eternal_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Philadelphia_Fusion_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\San_Francisco_Shock_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Seoul_Dynasty_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Shanghai_Dragons_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Toronto_Defiant_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Vancouver_Titans_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="jerseysTogether\Washington_Justice_Jersey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="LAVA A.png" />
     <Resource Include="LAVA H.png" />
     <Resource Include="LDN.png" />

@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using OWLSimGame;
 
 namespace OWLSimGame
 {
@@ -29,13 +30,13 @@ namespace OWLSimGame
             switch (team)
             {
                 case "Atlanta":
-                    teamJerseys.Source = new BitmapImage(new Uri("ms-appx:///Atlanta_Reign_Jersey.png"));
+                    teamJerseys.Source = new BitmapImage(new Uri("pack://application:,,,OWLSimGame/jerseysTogether/Atlanta_Reign_Jersey.png"));
                     break;
                 case "Boston":
-                    teamJerseys.Source = new BitmapImage(new Uri("ms-appx:///jerseysTogether/Boston_Uprising_Jersey.png"));
+                    teamJerseys.Source = new BitmapImage(new Uri("pack://application:,,,OWLSimGame/jerseysTogether/Boston_Uprising_Jersey.png"));
                     break;
                 case "Chengdu":
-                    teamJerseys.Source = new BitmapImage(new Uri("ms-appx:///jerseysTogether/Chengdu_Hunters_Jersey.png"));
+                    teamJerseys.Source = new BitmapImage(new Uri("pack://application:,,,OWLSimGame/jerseysTogether/Chengdu_Hunters_Jersey.png"));
                     break;
             }
         }

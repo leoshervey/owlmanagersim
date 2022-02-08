@@ -52,7 +52,7 @@
                 <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339" Source="/Atlanta_Reign_Jersey.png"/>
+        <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339" Source=""/>
 
     </Grid>
 </Window>
