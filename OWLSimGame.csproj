@@ -49,10 +49,7 @@
     <None Remove="jerseysTogether\Toronto_Defiant_Jersey.png" />
     <None Remove="jerseysTogether\Vancouver_Titans_Jersey.png" />
     <None Remove="jerseysTogether\Washington_Justice_Jersey.png" />
-    <None Remove="LAVA A.png" />
-    <None Remove="LAVA H.png" />
     <None Remove="LDN.png" />
-    <None Remove="LDNS H.png" />
     <None Remove="LGL.png" />
     <None Remove="LVA.png" />
     <None Remove="NYE.png" />
@@ -64,6 +61,26 @@
     <None Remove="SLD.png" />
     <None Remove="SupportIcon.png" />
     <None Remove="TankIcon.png" />
+    <None Remove="teamBadges\ATL.png" />
+    <None Remove="teamBadges\BST.png" />
+    <None Remove="teamBadges\CNG.png" />
+    <None Remove="teamBadges\DLS.png" />
+    <None Remove="teamBadges\FLR.png" />
+    <None Remove="teamBadges\GNZ.png" />
+    <None Remove="teamBadges\HNZ.png" />
+    <None Remove="teamBadges\HOU.png" />
+    <None Remove="teamBadges\LDN.png" />
+    <None Remove="teamBadges\LGL.png" />
+    <None Remove="teamBadges\LVA.png" />
+    <None Remove="teamBadges\NYE.png" />
+    <None Remove="teamBadges\PAR.png" />
+    <None Remove="teamBadges\PHL.png" />
+    <None Remove="teamBadges\SFS.png" />
+    <None Remove="teamBadges\SHD.png" />
+    <None Remove="teamBadges\SLD.png" />
+    <None Remove="teamBadges\TOR.png" />
+    <None Remove="teamBadges\VNC.png" />
+    <None Remove="teamBadges\WAS.png" />
     <None Remove="testbackground.jpg" />
     <None Remove="testbackground2.jpg" />
     <None Remove="TOR.png" />
@@ -85,14 +102,7 @@
     <Resource Include="background6.jpg" />
     <Resource Include="background8.jpg" />
     <Resource Include="background9.jpg" />
-    <Resource Include="BST.png" />
-    <Resource Include="CNG.png" />
-    <Resource Include="DLS.png" />
     <Resource Include="DPS.png" />
-    <Resource Include="FLR.png" />
-    <Resource Include="GNZ.png" />
-    <Resource Include="HNZ.png" />
-    <Resource Include="HOU.png" />
     <Resource Include="Icon-Ana.png" />
     <Resource Include="Icon-cassidy.png" />
     <Resource Include="Icon-Genji.png" />
@@ -158,26 +168,71 @@
     <Resource Include="jerseysTogether\Washington_Justice_Jersey.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="LAVA A.png" />
-    <Resource Include="LAVA H.png" />
-    <Resource Include="LDN.png" />
-    <Resource Include="LDNS H.png" />
-    <Resource Include="LGL.png" />
-    <Resource Include="LVA.png" />
-    <Resource Include="NYE.png" />
     <Resource Include="Overwatch_01.png.png" />
-    <Resource Include="PAR.png" />
-    <Resource Include="PHL.png" />
-    <Resource Include="SFS.png" />
-    <Resource Include="SHD.png" />
-    <Resource Include="SLD.png" />
     <Resource Include="SupportIcon.png" />
     <Resource Include="TankIcon.png" />
+    <Resource Include="teamBadges\ATL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\BST.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\CNG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\DLS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\FLR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\GNZ.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\HNZ.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\HOU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\LDN.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\LGL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\LVA.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\NYE.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\PAR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\PHL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\SFS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\SHD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\SLD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\TOR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\VNC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="teamBadges\WAS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="testbackground.jpg" />
     <Resource Include="testbackground2.jpg" />
-    <Resource Include="TOR.png" />
-    <Resource Include="VNC.png" />
-    <Resource Include="WAS.png" />
   </ItemGroup>
 
 </Project>
