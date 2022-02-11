@@ -22,6 +22,76 @@ namespace OWLSimGame
         public TacticsPage()
         {
             InitializeComponent();
+            nameOfTeam();
+        }
+
+        private void nameOfTeam()
+        {
+            string team;
+            team = CareerSelect.teamChoice();
+            switch (team)
+            {
+                case "Atlanta":
+                    teamName.Text = team;
+                    break;
+                case "Boston":
+                    teamName.Text = team;
+                    break;
+                case "Chengdu":
+                    teamName.Text = team;
+                    break;
+                case "Dallas":
+                    teamName.Text = team;
+                    break;
+                case "Florida":
+                    teamName.Text = team;
+                    break;
+                case "Guangzhou":
+                    teamName.Text = team;
+                    break;
+                case "Hangzhou":
+                    teamName.Text = team;
+                    break;
+                case "Houston":
+                    teamName.Text = team;
+                    break;
+                case "London":
+                    teamName.Text = team;
+                    break;
+                case "Los Angeles Glad":
+                    teamName.Text = "Gladiators";
+                    break;
+                case "Los Angeles Val":
+                    teamName.Text = "Valiant";
+                    break;
+                case "New York":
+                    teamName.Text = team;
+                    break;
+                case "Paris":
+                    teamName.Text = team;
+                    break;
+                case "Philadelphia":
+                    teamName.Text = "Fusion";
+                    break;
+                case "San Francisco":
+                    teamName.Text = "Shock";
+                    break;
+                case "Seoul":
+                    teamName.Text = team; 
+                    break;
+                case "Shanghai":
+                    teamName.Text = team; 
+                    break;
+                case "Toronto":
+                    teamName.Text = team;
+                    break;
+                case "Vancouver":
+                    teamName.Text = team; 
+                    break;
+                case "Washington":
+                    teamName.Text = team;
+                    break;
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -44,6 +114,36 @@ namespace OWLSimGame
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
+        }
+
+        private void hero1Choice(object sender, MouseButtonEventArgs e)
+        {
+            ChooseHero win1 = new ChooseHero();
+            win1.Show();
+        }
+
+        private void hero2Choice(object sender, MouseButtonEventArgs e)
+        {
+            ChooseHero win1 = new ChooseHero();
+            win1.Show();
+        }
+
+        private void hero3Choice(object sender, MouseButtonEventArgs e)
+        {
+            ChooseHero win1 = new ChooseHero();
+            win1.Show();
+        }
+
+        private void hero4Choice(object sender, MouseButtonEventArgs e)
+        {
+            ChooseHero win1 = new ChooseHero();
+            win1.Show();
+        }
+
+        private void hero5Choice(object sender, MouseButtonEventArgs e)
+        {
+            ChooseHero win1 = new ChooseHero();
+            win1.Show();
         }
     }
 }

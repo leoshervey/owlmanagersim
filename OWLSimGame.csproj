@@ -26,6 +26,7 @@
     <None Remove="HOU.png" />
     <None Remove="Icon-Ana.png" />
     <None Remove="Icon-cassidy.png" />
+    <None Remove="Icon-D.Va.png" />
     <None Remove="Icon-Genji.png" />
     <None Remove="Icon-Lúcio.png" />
     <None Remove="Icon-portrait.0s4jW.png" />
@@ -105,6 +106,7 @@
     <Resource Include="DPS.png" />
     <Resource Include="Icon-Ana.png" />
     <Resource Include="Icon-cassidy.png" />
+    <Resource Include="Icon-D.Va.png" />
     <Resource Include="Icon-Genji.png" />
     <Resource Include="Icon-Lúcio.png" />
     <Resource Include="Icon-portrait.0s4jW.png" />

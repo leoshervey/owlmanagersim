@@ -8,8 +8,8 @@
         Title="TransferMarket" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
         <ListBox x:Name="transferList" Margin="22,351,22,18" Background="#FF2C2C2C" SelectionChanged="transferList_SelectionChanged" BorderBrush="{x:Null}"/>
-        <Image x:Name="badge" Height="80" Margin="360,26,360,0" VerticalAlignment="Top"/>
-        <Button x:Name="back" Content="BACK" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="86" Click="Button_Click" IsEnabled="False" FontFamily="Koverwatch" FontSize="20" Margin="22,26,0,0"/>
+        <Image x:Name="badge" Height="135" Margin="892,26,892,0" VerticalAlignment="Top" Source="/teamBadges/LDN.png" IsEnabled="False"/>
+        <Button x:Name="back" Content="BACK" HorizontalAlignment="Left" Height="51" Margin="22,26,0,0" VerticalAlignment="Top" Width="120" FontFamily="Koverwatch" FontSize="36" Click="back_Click"/>
 
     </Grid>
 </Window>

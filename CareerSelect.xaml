@@ -12,7 +12,7 @@
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="1158" Stroke="Black" VerticalAlignment="Center" Width="1955" Fill="#FF4A4C4E" Opacity="0.8"/>
         <Image HorizontalAlignment="Left" Height="65" Margin="80,43,0,0" VerticalAlignment="Top" Width="62"/>
-        <Image x:Name="ldnSpf" HorizontalAlignment="Left" Height="168" Margin="62,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LDN.png" MouseLeftButtonDown="ldnSpfChoice" IsEnabled="False" Stretch="Uniform"/>
+        <Image x:Name="ldnSpf" HorizontalAlignment="Left" Height="168" Margin="62,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LDN.png" MouseLeftButtonDown="ldnSpfChoice"/>
         <Image x:Name="atlReign" HorizontalAlignment="Left" Height="169" Margin="62,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/ATL.png" MouseLeftButtonDown="atlReignChoice"/>
         <Image x:Name="bstUpr" HorizontalAlignment="Left" Height="169" Margin="292,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/BST.png" MouseLeftButtonDown="bstUpChoice"/>
         <Image x:Name="cngHun" HorizontalAlignment="Left" Height="169" Margin="516,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/CNG.png" MouseLeftButtonDown="chgHunChoice"/>

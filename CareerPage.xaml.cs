@@ -23,7 +23,6 @@ namespace OWLSimGame
     {
         public CareerPage()
         {
-
             InitializeComponent();
             Logo();
         }

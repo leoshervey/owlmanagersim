@@ -21,8 +21,8 @@ namespace OWLSimGame
     {
         public TransferMarket()
         {
-            Logo();
             InitializeComponent();
+            Logo();
         }
 
         private void Logo()
@@ -99,9 +99,11 @@ namespace OWLSimGame
             //database tables Players and Staff
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void back_Click(object sender, RoutedEventArgs e)
         {
-
+            CareerPage win1 = new CareerPage();
+            win1.Show();
+            this.Close();
         }
     }
 }
