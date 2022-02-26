@@ -90,7 +90,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.115.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -235,6 +237,12 @@
     </Resource>
     <Resource Include="testbackground.jpg" />
     <Resource Include="testbackground2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="owl_eng_db.db">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

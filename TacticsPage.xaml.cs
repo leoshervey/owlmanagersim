@@ -104,6 +104,11 @@ namespace OWLSimGame
 
         }
 
+        private void teamList()
+        {
+            //database for team list
+        }
+
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
 
@@ -144,6 +149,31 @@ namespace OWLSimGame
         {
             ChooseHero win1 = new ChooseHero();
             win1.Show();
+        }
+
+        private void dpsPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void dpsPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void tankPlayer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void supportPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void supportPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

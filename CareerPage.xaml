@@ -38,22 +38,24 @@
         <TextBox x:Name="nextMatchDate" HorizontalAlignment="Center" Height="94" Margin="0,137,0,0" Text="Next Match&#xA;[DATE]" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" TextChanged="TextBox_TextChanged_1" Background="{x:Null}" TextAlignment="Center" FontFamily="Koverwatch" FontSize="48" BorderBrush="{x:Null}"/>
         <Button Content="Advance -&gt;" HorizontalAlignment="Left" Height="82" Margin="1628,0,0,0" VerticalAlignment="Top" Width="292" FontFamily="Koverwatch" FontSize="36" Click="Button_Click_3"/>
         <TextBox x:Name="currentDate" HorizontalAlignment="Left" Height="52" Margin="1628,80,0,0" Text="Current Date" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" TextAlignment="Center" FontFamily="Koverwatch" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="tactics" Content="Tactics" HorizontalAlignment="Center" Height="610" Margin="0,268,0,0" VerticalAlignment="Top" Width="584" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_1" Foreground="White" BorderBrush="{x:Null}">
+        <Button x:Name="tactics" Content="Tactics" HorizontalAlignment="Left" Height="610" Margin="562,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_1" Foreground="White" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/background8.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Button x:Name="transferMarket" Content="Transfer Market" HorizontalAlignment="Left" Height="610" Margin="50,268,0,0" VerticalAlignment="Top" Width="584" FontFamily="Koverwatch" FontSize="72" Click="Button_Click" Foreground="White" FontWeight="Regular" FontStyle="Normal" BorderBrush="{x:Null}">
+        <Button x:Name="transferMarket" Content="Transfer Market" HorizontalAlignment="Left" Height="610" Margin="50,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click" Foreground="White" FontWeight="Regular" FontStyle="Normal" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/background6.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Button x:Name="staffAndObjectives" Content="Staff and Objectives" HorizontalAlignment="Left" Height="610" Margin="1296,268,0,0" VerticalAlignment="Top" Width="584" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_2" BorderBrush="{x:Null}" Foreground="White" OpacityMask="Black">
+        <Button x:Name="staffAndObjectives" Content="Staff and Objectives" HorizontalAlignment="Left" Height="610" Margin="1071,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_2" BorderBrush="{x:Null}" Foreground="White" OpacityMask="Black">
             <Button.Background>
                 <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
         <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339"/>
+        <ListBox x:Name="leagueTable" HorizontalAlignment="Left" Height="610" Margin="1590,268,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" BorderBrush="#FF4A4C4E"/>
+        <Label x:Name="leagueTableLbl" Content="League Table" HorizontalAlignment="Left" Height="56" Margin="1590,212,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="48"/>
 
     </Grid>
 </Window>

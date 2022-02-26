@@ -7,9 +7,23 @@
         mc:Ignorable="d"
         Title="TransferMarket" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
-        <ListBox x:Name="transferList" Margin="22,351,22,18" Background="#FF2C2C2C" SelectionChanged="transferList_SelectionChanged" BorderBrush="{x:Null}"/>
+        <ListBox x:Name="transferList" Margin="25,402,1646,18" Background="#FF2C2C2C" SelectionChanged="transferList_SelectionChanged" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontFamily="Koverwatch"/>
         <Image x:Name="badge" Height="135" Margin="892,26,892,0" VerticalAlignment="Top" Source="/teamBadges/LDN.png" IsEnabled="False"/>
         <Button x:Name="back" Content="BACK" HorizontalAlignment="Left" Height="51" Margin="22,26,0,0" VerticalAlignment="Top" Width="120" FontFamily="Koverwatch" FontSize="36" Click="back_Click"/>
+        <TextBox x:Name="playerSearchBar" HorizontalAlignment="Left" Height="50" Margin="25,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Background="Gray" FontSize="48" FontFamily="Koverwatch" TextChanged="playerSearchBar_TextChanged" Foreground="White"/>
+        <Label Content="Player Tag" HorizontalAlignment="Left" Margin="57,339,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8" FontWeight="Bold"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="431,339,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8" FontWeight="Bold"/>
+        <Label Content="Team" HorizontalAlignment="Left" Margin="776,339,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8" FontWeight="Bold"/>
+        <Label Content="Overall" HorizontalAlignment="Left" Margin="1049,339,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8" FontWeight="Bold"/>
+        <Label Content="Nationality" HorizontalAlignment="Left" Margin="1603,339,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8" FontWeight="Bold" RenderTransformOrigin="0.576,0.474"/>
+        <Label x:Name="budgetBox" Content="" HorizontalAlignment="Left" Height="60" Margin="1589,26,0,0" VerticalAlignment="Top" Width="299" Foreground="White" FontFamily="Koverwatch" FontSize="48" Background="#FF2C2C2C"/>
+        <Label Content="Search For Players" HorizontalAlignment="Left" Height="50" Margin="22,234,0,0" VerticalAlignment="Top" Width="302" FontFamily="Koverwatch" FontSize="48" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Foreground="White"/>
+        <Label x:Name="Roles" Content="Role" HorizontalAlignment="Left" Margin="1369,339,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFF9F8F8" FontWeight="Bold" RenderTransformOrigin="0.873,0.474"/>
+        <TextBlock  x:Name="txtBlTeams" HorizontalAlignment="Left" Height="660" Margin="703,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Foreground="#FFFDF6F6" FontSize="18" FontFamily="Koverwatch" LineStackingStrategy="BlockLineHeight" LineHeight="22" Background="#FF2C2C2C"/>
+        <TextBlock x:Name="txtBlNames" HorizontalAlignment="Left" Height="660" Margin="304,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" Background="#FF2C2C2C" Foreground="#FFFDF8F8" FontSize="18" FontFamily="Koverwatch" LineStackingStrategy="BlockLineHeight" LineHeight="22"/>
+        <TextBlock x:Name="txtBlOverall" HorizontalAlignment="Left" Height="660" Margin="978,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Background="#FF2C2C2C" Foreground="#FFFDFDFD" FontFamily="Koverwatch" FontSize="18" LineStackingStrategy="BlockLineHeight" LineHeight="22"/>
+        <TextBlock x:Name="txtBlRole" HorizontalAlignment="Left" Height="660" Margin="1290,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Foreground="#FFFDF8F8" Background="#FF2C2C2C" FontFamily="Koverwatch" FontSize="18" LineStackingStrategy="BlockLineHeight" LineHeight="22"/>
+        <TextBlock x:Name="txtBlNationality" HorizontalAlignment="Left" Height="660" Margin="1570,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" Background="#FF2C2C2C" Foreground="#FFF7F4F4" FontFamily="Koverwatch" FontSize="18" LineStackingStrategy="BlockLineHeight" LineHeight="22"/>
 
     </Grid>
 </Window>

@@ -7,171 +7,43 @@
         mc:Ignorable="d"
         Title="ChooseHero" Height="450" Width="800">
     <Grid Background="#FF4A4C4E" Margin="-1,0,1,0">
-        <Image x:Name="ana" HorizontalAlignment="Left" Height="50" Margin="21,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Ana.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Ana.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="ashe" HorizontalAlignment="Left" Height="50" Margin="21,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Ashe.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Ashe.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="baptiste" HorizontalAlignment="Left" Height="50" Margin="139,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Baptiste.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Baptiste.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="bastion" HorizontalAlignment="Left" Height="50" Margin="122,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Bastion.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Bastion.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="brigitte" HorizontalAlignment="Left" Height="50" Margin="252,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Brigitte.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Brigitte.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="cassidy" HorizontalAlignment="Left" Height="50" Margin="227,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-cassidy.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-cassidy.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="dva" HorizontalAlignment="Left" Height="50" Margin="21,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-D.Va.png" MouseLeftButtonDown="tank_dva">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-D.Va.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="doomfist" HorizontalAlignment="Left" Height="50" Margin="325,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Doomfist.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Doomfist.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="echo" HorizontalAlignment="Left" Height="50" Margin="427,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Echo.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Echo.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="genji" HorizontalAlignment="Left" Height="50" Margin="529,179,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Genji.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Genji.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="hanzo" HorizontalAlignment="Left" Height="50" Margin="634,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Hanzo.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Hanzo.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="junkrat" HorizontalAlignment="Left" Height="50" Margin="733,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Junkrat.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Junkrat.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="lucio" HorizontalAlignment="Left" Height="50" Margin="378,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Lúcio.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Lúcio.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="mei" HorizontalAlignment="Left" Height="50" Margin="21,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Mei.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Mei.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="mercy" HorizontalAlignment="Left" Height="50" Margin="504,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Mercy.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Mercy.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="moira" HorizontalAlignment="Left" Height="50" Margin="609,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Moira.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Moira.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="orisa" HorizontalAlignment="Left" Height="50" Margin="122,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Orisa.png" MouseLeftButtonDown="tank_orisa">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Orisa.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="pharah" HorizontalAlignment="Left" Height="50" Margin="106,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Pharah.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Pharah.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="reaper" HorizontalAlignment="Left" Height="50" Margin="194,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.24wg5.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.24wg5.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="reinhardt" HorizontalAlignment="Left" Height="50" Margin="227,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.0s4jW.png" RenderTransformOrigin="0.499,0.481" MouseLeftButtonDown="tank_reinhardt">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.0s4jW.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="roadhog" HorizontalAlignment="Left" Height="50" Margin="325,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Roadhog.png" MouseLeftButtonDown="tank_roadhog">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Roadhog.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="sigma" HorizontalAlignment="Left" Height="50" Margin="427,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Sigma.png" MouseLeftButtonDown="tank_sigma">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Sigma.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="soldier" HorizontalAlignment="Left" Height="50" Margin="289,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Soldier_76.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Soldier_76.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="sombra" HorizontalAlignment="Left" Height="50" Margin="378,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Sombra.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Sombra.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="symmetra" HorizontalAlignment="Left" Height="50" Margin="479,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.3sDqH.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.3sDqH.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="torbjorn" HorizontalAlignment="Left" Height="50" Margin="571,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.3OBuQ.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.3OBuQ.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="tracer" HorizontalAlignment="Left" Height="50" Margin="659,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Tracer.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Tracer.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="widowmaker" HorizontalAlignment="Left" Height="50" Margin="733,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.29jKn.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.29jKn.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="winston" HorizontalAlignment="Left" Height="50" Margin="529,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.0AIzO.png" MouseLeftButtonDown="tank_winston">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.03Fcx.png" Stretch="None" TileMode="None"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="wreckingball" HorizontalAlignment="Left" Height="50" Margin="634,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Wrecking_Ball.png" MouseLeftButtonDown="tank_wreckingball">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Wrecking_Ball.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="zarya" HorizontalAlignment="Left" Height="50" Margin="731,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Zarya.png" MouseLeftButtonDown="tank_zarya">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-Zarya.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="zenyatta" HorizontalAlignment="Left" Height="50" Margin="733,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.03Fcx.png">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/heroes/Icon-portrait.03Fcx.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Rectangle Height="32" Margin="20,31,19,0" VerticalAlignment="Top" Fill="#FFFA9C1D"/>
+        <Image x:Name="ana" HorizontalAlignment="Left" Height="50" Margin="21,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Ana.png"/>
+        <Image x:Name="ashe" HorizontalAlignment="Left" Height="50" Margin="21,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Ashe.png"/>
+        <Image x:Name="baptiste" HorizontalAlignment="Left" Height="50" Margin="139,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Baptiste.png"/>
+        <Image x:Name="bastion" HorizontalAlignment="Left" Height="50" Margin="122,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Bastion.png"/>
+        <Image x:Name="brigitte" HorizontalAlignment="Left" Height="50" Margin="252,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Brigitte.png"/>
+        <Image x:Name="cassidy" HorizontalAlignment="Left" Height="50" Margin="227,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-cassidy.png"/>
+        <Image x:Name="dva" HorizontalAlignment="Left" Height="50" Margin="21,78,0,0" VerticalAlignment="Top" Width="50" MouseLeftButtonDown="tank_dva" Source="/heroes/Icon-D.Va.png"/>
+        <Image x:Name="doomfist" HorizontalAlignment="Left" Height="50" Margin="325,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Doomfist.png"/>
+        <Image x:Name="echo" HorizontalAlignment="Left" Height="50" Margin="427,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Echo.png"/>
+        <Image x:Name="genji" HorizontalAlignment="Left" Height="50" Margin="529,179,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Genji.png"/>
+        <Image x:Name="hanzo" HorizontalAlignment="Left" Height="50" Margin="634,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Hanzo.png"/>
+        <Image x:Name="junkrat" HorizontalAlignment="Left" Height="50" Margin="733,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Junkrat.png"/>
+        <Image x:Name="lucio" HorizontalAlignment="Left" Height="50" Margin="378,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Lúcio.png"/>
+        <Image x:Name="mei" HorizontalAlignment="Left" Height="50" Margin="21,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Mei.png"/>
+        <Image x:Name="mercy" HorizontalAlignment="Left" Height="50" Margin="504,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Mercy.png"/>
+        <Image x:Name="moira" HorizontalAlignment="Left" Height="50" Margin="609,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Moira.png"/>
+        <Image x:Name="orisa" HorizontalAlignment="Left" Height="50" Margin="122,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Orisa.png" MouseLeftButtonDown="tank_orisa"/>
+        <Image x:Name="pharah" HorizontalAlignment="Left" Height="50" Margin="106,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Pharah.png"/>
+        <Image x:Name="reaper" HorizontalAlignment="Left" Height="50" Margin="194,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.24wg5.png"/>
+        <Image x:Name="reinhardt" HorizontalAlignment="Left" Height="50" Margin="227,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.0s4jW.png" RenderTransformOrigin="0.499,0.481" MouseLeftButtonDown="tank_reinhardt"/>
+        <Image x:Name="roadhog" HorizontalAlignment="Left" Height="50" Margin="325,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Roadhog.png" MouseLeftButtonDown="tank_roadhog"/>
+        <Image x:Name="sigma" HorizontalAlignment="Left" Height="50" Margin="427,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Sigma.png" MouseLeftButtonDown="tank_sigma"/>
+        <Image x:Name="soldier" HorizontalAlignment="Left" Height="50" Margin="289,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Soldier_76.png"/>
+        <Image x:Name="sombra" HorizontalAlignment="Left" Height="50" Margin="378,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Sombra.png"/>
+        <Image x:Name="symmetra" HorizontalAlignment="Left" Height="50" Margin="479,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.3sDqH.png"/>
+        <Image x:Name="torbjorn" HorizontalAlignment="Left" Height="50" Margin="571,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.3OBuQ.png"/>
+        <Image x:Name="tracer" HorizontalAlignment="Left" Height="50" Margin="659,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Tracer.png"/>
+        <Image x:Name="widowmaker" HorizontalAlignment="Left" Height="50" Margin="733,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.29jKn.png"/>
+        <Image x:Name="winston" HorizontalAlignment="Left" Height="50" Margin="529,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.0AIzO.png" MouseLeftButtonDown="tank_winston"/>
+        <Image x:Name="wreckingball" HorizontalAlignment="Left" Height="50" Margin="634,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Wrecking_Ball.png" MouseLeftButtonDown="tank_wreckingball"/>
+        <Image x:Name="zarya" HorizontalAlignment="Left" Height="50" Margin="731,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Zarya.png" MouseLeftButtonDown="tank_zarya"/>
+        <Image x:Name="zenyatta" HorizontalAlignment="Left" Height="50" Margin="733,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.03Fcx.png"/>
+        <Rectangle Height="32" Margin="20,31,0,0" VerticalAlignment="Top" Fill="#FFFA9C1D" HorizontalAlignment="Left" Width="761"/>
         <Label x:Name="tankLable" Content="TANK" HorizontalAlignment="Center" Height="29" Margin="0,31,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
-        <Rectangle Height="32" Margin="21,147,17,0" VerticalAlignment="Top" Fill="#FFFA9C1D"/>
+        <Rectangle Height="32" Margin="21,147,0,0" VerticalAlignment="Top" Fill="#FFFA9C1D" HorizontalAlignment="Left" Width="762"/>
         <Label x:Name="tankLable_Copy" Content="damage" HorizontalAlignment="Left" Height="30" Margin="368,148,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
-        <Rectangle Height="32" Margin="22,326,16,0" VerticalAlignment="Top" Fill="#FFFA9C1D"/>
-        <Label x:Name="tankLable_Copy1" Content="TANK" HorizontalAlignment="Left" Height="29" Margin="368,326,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
+        <Rectangle Height="32" Margin="22,326,0,0" VerticalAlignment="Top" Fill="#FFFA9C1D" HorizontalAlignment="Left" Width="762"/>
+        <Label x:Name="tankLable_Copy1" Content="SUPPORT" HorizontalAlignment="Left" Height="29" Margin="368,326,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
     </Grid>
 </Window>
