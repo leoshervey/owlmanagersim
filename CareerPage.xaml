@@ -40,17 +40,17 @@
         <TextBox x:Name="currentDate" HorizontalAlignment="Left" Height="52" Margin="1628,80,0,0" Text="Current Date" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" TextAlignment="Center" FontFamily="Koverwatch" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
         <Button x:Name="tactics" Content="Tactics" HorizontalAlignment="Left" Height="610" Margin="562,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_1" Foreground="White" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/background8.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Button x:Name="transferMarket" Content="Transfer Market" HorizontalAlignment="Left" Height="610" Margin="50,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click" Foreground="White" FontWeight="Regular" FontStyle="Normal" BorderBrush="{x:Null}">
+        <Button x:Name="transferMarket" Content="Transfer Market" HorizontalAlignment="Left" Height="610" Margin="50,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click" Foreground="White" FontWeight="Normal" FontStyle="Normal" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/background6.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Button x:Name="staffAndObjectives" Content="Staff and Objectives" HorizontalAlignment="Left" Height="610" Margin="1071,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_2" BorderBrush="{x:Null}" Foreground="White" OpacityMask="Black">
+        <Button x:Name="leaguePage" Content="LEAGUE" HorizontalAlignment="Left" Height="610" Margin="1071,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_2" BorderBrush="{x:Null}" Foreground="White" OpacityMask="Black">
             <Button.Background>
-                <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/background8.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
         <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339"/>

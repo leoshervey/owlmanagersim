@@ -24,7 +24,10 @@ namespace OWLSimGame
         {
             InitializeComponent();
             playerDetails(selected);
+            currPlayer = selected;
         }
+
+        private readonly string currPlayer;
 
         private void Logo(int team)
         { 
@@ -95,7 +98,66 @@ namespace OWLSimGame
 
         private void buyButton_Click(object sender, RoutedEventArgs e)
         {
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                int player;
+                conn.Open();
+                string query = @"SELECT players.price, players.overall, teams.team
+                                     FROM players, teams
+                                     WHERE players.teamID = teams.ID and players.tag = @player;";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@player", currPlayer);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string tempPrice = reader[0].ToString();
+                    int price = Convert.ToInt32(tempPrice);
+                    string tempOverall = reader[0].ToString();
+                    int overall = Convert.ToInt32(tempOverall);
+                    string team = (string)reader[2];
+                }
+            }
+            string userTeam = CareerSelect.teamChoice();
+            if ()
+            {
 
+            }
+            else
+            {
+                
+            }
+        }
+
+        private bool acceptReject(int offer, int price, double playerStat, int averagePlayer)
+        {
+            double dampner;
+            int saleChance, ranNum;
+            if ((offer/price) * 100 < 80)
+            {
+                return false;
+            }
+            else
+            {
+                if (playerStat > averagePlayer)
+                {
+                    dampner = 1.5;
+                }
+                else
+                {
+                    dampner = 0.8;
+                }
+                Random rnd = new Random();
+                ranNum = rnd.Next(1, 7);
+                saleChance = ((ranNum * dampner) / 2);
+                if (saleChance >= 1.6)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         private void playerDetails(string selected)
@@ -112,7 +174,7 @@ namespace OWLSimGame
                 cmd.Parameters.AddWithValue("@playerSelected", selected);
                 SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
-                    {
+                {
                     playerName.Content = (string)reader[0];
                     firstNameLbl.Content = (string)reader[1];
                     lastNameLbl.Content = (string)reader[2];
@@ -126,7 +188,7 @@ namespace OWLSimGame
                     ldrshpLbl.Content = reader[10].ToString();
                     overallLbl.Content = reader[11].ToString();
                     string cost = reader[13].ToString();
-                    priceLbl.Content = (string.Format("${0}", cost));
+                    priceLbl.Content = string.Format("${0}", cost);
                     string temp = reader[12].ToString();
                     teamID = Convert.ToInt32(temp);
                     Logo(teamID);
