@@ -27,69 +27,69 @@ namespace OWLSimGame
 
         private void nameOfTeam()
         {
-            string team;
+            int team;
             team = CareerSelect.teamChoice();
             switch (team)
             {
-                case "Atlanta":
-                    teamName.Text = team;
+                case 1:
+                    teamName.Text = "Atlanta";
                     break;
-                case "Boston":
-                    teamName.Text = team;
+                case 2:
+                    teamName.Text = "Boston";
                     break;
-                case "Chengdu":
-                    teamName.Text = team;
+                case 3:
+                    teamName.Text = "Chengdu";
                     break;
-                case "Dallas":
-                    teamName.Text = team;
+                case 4:
+                    teamName.Text = "Dallas";
                     break;
-                case "Florida":
-                    teamName.Text = team;
+                case 5:
+                    teamName.Text = "Florida";
                     break;
-                case "Guangzhou":
-                    teamName.Text = team;
+                case 6:
+                    teamName.Text = "Guangzhou";
                     break;
-                case "Hangzhou":
-                    teamName.Text = team;
+                case 7:
+                    teamName.Text = "Hangzhou";
                     break;
-                case "Houston":
-                    teamName.Text = team;
+                case 8:
+                    teamName.Text = "Houston";
                     break;
-                case "London":
-                    teamName.Text = team;
+                case 9:
+                    teamName.Text = "London";
                     break;
-                case "Los Angeles Glad":
+                case 10:
                     teamName.Text = "Gladiators";
                     break;
-                case "Los Angeles Val":
+                case 11:
                     teamName.Text = "Valiant";
                     break;
-                case "New York":
-                    teamName.Text = team;
+                case 12:
+                    teamName.Text = "New York";
                     break;
-                case "Paris":
-                    teamName.Text = team;
+                case 13:
+                    teamName.Text = "Paris";
                     break;
-                case "Philadelphia":
+                case 14:
                     teamName.Text = "Fusion";
                     break;
-                case "San Francisco":
+                case 15:
                     teamName.Text = "Shock";
                     break;
-                case "Seoul":
-                    teamName.Text = team; 
+                case 16:
+                    teamName.Text = "Seoul"; 
                     break;
-                case "Shanghai":
-                    teamName.Text = team; 
+                case 17:
+                    teamName.Text = "Shanghai"; 
                     break;
-                case "Toronto":
-                    teamName.Text = team;
+                case 18:
+                    teamName.Text = "Toronto";
                     break;
-                case "Vancouver":
-                    teamName.Text = team; 
+                case 19:
+                    teamName.Text = "Vancouver"; 
                     break;
-                case "Washington":
-                    teamName.Text = team;
+                case 20:
+                    teamName.Text = "Washington";
                     break;
             }
         }

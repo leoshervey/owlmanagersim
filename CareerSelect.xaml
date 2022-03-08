@@ -27,11 +27,11 @@
         <Image x:Name="parEtern" HorizontalAlignment="Left" Height="170" Margin="978,324,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/PAR.png" MouseLeftButtonDown="parEtrnChoice"/>
         <Image x:Name="phlFus" HorizontalAlignment="Left" Height="168" Margin="1218,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/PHL.png" MouseLeftButtonDown="phlFusChoice"/>
         <Image x:Name="sfShck" HorizontalAlignment="Left" Height="168" Margin="1479,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SFS.png" MouseLeftButtonDown="sfShckChoice"/>
-        <Image x:Name="shDrag" HorizontalAlignment="Left" Height="168" Margin="1714,303,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SHD.png" MouseLeftButtonDown="shgDragChoice"/>
-        <Image x:Name="selDyn" HorizontalAlignment="Left" Height="167" Margin="516,591,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SLD.png" MouseLeftButtonDown="solDynChoice"/>
-        <Image x:Name="torDefi" HorizontalAlignment="Left" Height="170" Margin="722,577,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/TOR.png" MouseLeftButtonDown="trnDefChoice"/>
+        <Image x:Name="shDrag" HorizontalAlignment="Left" Height="168" Margin="502,586,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SHD.png" MouseLeftButtonDown="shgDragChoice"/>
+        <Image x:Name="selDyn" HorizontalAlignment="Left" Height="167" Margin="1715,305,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SLD.png" MouseLeftButtonDown="solDynChoice"/>
+        <Image x:Name="torDefi" HorizontalAlignment="Left" Height="146" Margin="722,602,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/TOR.png" MouseLeftButtonDown="trnDefChoice"/>
         <Image x:Name="vanTitans" HorizontalAlignment="Left" Height="168" Margin="983,591,0,0" VerticalAlignment="Top" Width="155" Source="/teamBadges/VNC.png" MouseLeftButtonDown="vanTitnChoice"/>
-        <Image x:Name="wasJust" HorizontalAlignment="Left" Height="173" Margin="1218,585,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/WAS.png" MouseLeftButtonDown="wasJusChoice"/>
+        <Image x:Name="wasJust" HorizontalAlignment="Left" Height="172" Margin="1218,593,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/WAS.png" MouseLeftButtonDown="wasJusChoice"/>
         <TextBlock HorizontalAlignment="Left" Height="174" Margin="516,842,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="858" Background="#FF535151" Foreground="White" FontFamily="Koverwatch" FontSize="20" TextAlignment="Center"><Run/><LineBreak/><Run Text="Selected team information / summary"/></TextBlock>
         <Button Content="EXIT" HorizontalAlignment="Left" Height="50" Margin="36,983,0,0" VerticalAlignment="Top" Width="132" FontFamily="Koverwatch" FontSize="48" Click="Button_Click"/>
 

@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Data.SQLite;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace OWLSimGame
 {
@@ -30,109 +20,150 @@ namespace OWLSimGame
         private readonly string currPlayer;
 
         private void Logo(int team)
-        { 
+        {
             switch (team)
             {
                 case 1:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\ATL.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\ATL.png", UriKind.Relative));
                     break;
                 case 2:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\BST.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\BST.png", UriKind.Relative));
                     break;
                 case 3:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\CNG.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\CNG.png", UriKind.Relative));
                     break;
                 case 4:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\DLS.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\DLS.png", UriKind.Relative));
                     break;
                 case 5:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\FLR.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\FLR.png", UriKind.Relative));
                     break;
                 case 6:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\GNZ.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\GNZ.png", UriKind.Relative));
                     break;
                 case 7:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\HNZ.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\HNZ.png", UriKind.Relative));
                     break;
                 case 8:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\HOU.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\HOU.png", UriKind.Relative));
                     break;
                 case 9:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\LDN.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\LDN.png", UriKind.Relative));
                     break;
                 case 10:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\LGL.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\LGL.png", UriKind.Relative));
                     break;
                 case 11:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\LVA.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\LVA.png", UriKind.Relative));
                     break;
                 case 12:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\NYE.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\NYE.png", UriKind.Relative));
                     break;
                 case 13:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\PAR.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\PAR.png", UriKind.Relative));
                     break;
                 case 14:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\PHL.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\PHL.png", UriKind.Relative));
                     break;
                 case 15:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\SFS.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SFS.png", UriKind.Relative));
                     break;
                 case 16:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\SHD.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SHD.png", UriKind.Relative));
                     break;
                 case 17:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\SLD.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SLD.png", UriKind.Relative));
                     break;
                 case 18:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\TOR.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\TOR.png", UriKind.Relative));
                     break;
                 case 19:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\VNC.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\VNC.png", UriKind.Relative));
                     break;
                 case 20:
-                    currTeam.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\WAS.png"));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\WAS.png", UriKind.Relative));
                     break;
             }
         }
 
         private void buyButton_Click(object sender, RoutedEventArgs e)
         {
+            errorMessages.Content = " ";
+            string player;
+            int budget;
+            int price;
+            int overall;
+            int userTeam = CareerSelect.teamChoice();
+            string team;
+            int playerOffer = int.Parse(playerOfferInput.Text);
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
             {
-                int player;
                 conn.Open();
-                string query = @"SELECT players.price, players.overall, teams.team
+                string query = @"SELECT players.price, players.overall, teams.team, players.tag
                                      FROM players, teams
                                      WHERE players.teamID = teams.ID and players.tag = @player;";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@player", currPlayer);
+                cmd.Parameters.AddWithValue("@userTeam", userTeam);
                 SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    player = reader[3].ToString();
                     string tempPrice = reader[0].ToString();
-                    int price = Convert.ToInt32(tempPrice);
+                    price = Convert.ToInt32(tempPrice);
                     string tempOverall = reader[0].ToString();
-                    int overall = Convert.ToInt32(tempOverall);
-                    string team = (string)reader[2];
+                    overall = Convert.ToInt32(tempOverall);
+                    team = (string)reader[2];
+                    string query2 = @"SELECT avg(players.overall) FROM players";
+                    SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
+                    SQLiteDataReader reader2 = cmd2.ExecuteReader();
+                    while (reader2.Read())
+                    {
+                        string tempTotalOverall = reader2[0].ToString();
+                        double totalOverall = Convert.ToDouble(tempTotalOverall);
+                        string query4 = @"SELECT budget FROM teams WHERE ID = @id";
+                        SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
+                        cmd4.Parameters.AddWithValue("@id", userTeam);
+                        object temp = cmd4.ExecuteScalar();
+                        budget = Convert.ToInt32(temp);
+                        if (budget >= playerOffer)
+                        {
+                            bool tranfser = acceptReject(playerOffer, price, overall, totalOverall);
+                            if (tranfser == true)
+                            {
+                                int newBudget = budget - Convert.ToInt32(playerOffer);
+                                Logo(userTeam);
+                                string query3 = @"UPDATE players SET teamID = @newTeam WHERE players.tag = @player;
+                                                        UPDATE teams SET budget = @newBudget WHERE teams.ID = @newTeam;";
+                                SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
+                                cmd3.Parameters.AddWithValue("@newTeam", userTeam);
+                                cmd3.Parameters.AddWithValue("@player", player);
+                                cmd3.Parameters.AddWithValue("@newBudget", newBudget);
+                                cmd3.ExecuteNonQuery();
+                            }
+                            else
+                            {
+                                playerOfferInput.Clear();
+                                errorMessages.Content = "Not Accepted";
+                            }
+                        }
+                        else
+                        {
+                            errorMessages.Content = "Not Enough Funds";
+                        }
+                    }
                 }
-            }
-            string userTeam = CareerSelect.teamChoice();
-            if ()
-            {
-
-            }
-            else
-            {
-                
+                conn.Close();
             }
         }
 
-        private bool acceptReject(int offer, int price, double playerStat, int averagePlayer)
+
+        private bool acceptReject(int offer, int price, int playerStat, double averagePlayer)
         {
+            int offPrice = (offer / price) * 100;
             double dampner;
             int saleChance, ranNum;
-            if ((offer/price) * 100 < 80)
+            if (offPrice < 80)
             {
                 return false;
             }
@@ -148,7 +179,7 @@ namespace OWLSimGame
                 }
                 Random rnd = new Random();
                 ranNum = rnd.Next(1, 7);
-                saleChance = ((ranNum * dampner) / 2);
+                saleChance = (ranNum * (int)dampner) / 2;
                 if (saleChance >= 1.6)
                 {
                     return true;
@@ -167,9 +198,9 @@ namespace OWLSimGame
                 int teamID;
                 conn.Open();
                 string query = @"SELECT players.tag, players.firstName, players.lastName, nations.country, roles.role, heroes.Name, players.heroKnowledge, players.mechanics, players.gameSense, players.teamWork, players.leadership, players.overall, players.teamID, players.price
-                FROM players, nations, roles, heroes, teams
-                WHERE players.nationality = nations.ID AND players.role = roles.ID AND players.Specalist = heroes.ID AND players.teamID = teams.ID
-                AND players.tag = @playerSelected";
+                    FROM players, nations, roles, heroes, teams
+                    WHERE players.nationality = nations.ID AND players.role = roles.ID AND players.Specalist = heroes.ID AND players.teamID = teams.ID
+                    AND players.tag = @playerSelected";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@playerSelected", selected);
                 SQLiteDataReader reader = cmd.ExecuteReader();

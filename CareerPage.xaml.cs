@@ -28,69 +28,69 @@ namespace OWLSimGame
         }
         private void Logo()
         {
-            string team;
+            int team;
             team = CareerSelect.teamChoice();
             switch (team)
             {
-                case "Atlanta":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Atlanta_Reign_Jersey.png"));
+                case 1:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Atlanta_Reign_Jersey.png", UriKind.Relative));
                     break;
-                case "Boston":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Boston_Uprising_Jersey.png"));
+                case 2:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Boston_Uprising_Jersey.png", UriKind.Relative));
                     break;
-                case "Chengdu":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Chengdu_Hunters_Jersey.png"));
+                case 3:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Chengdu_Hunters_Jersey.png", UriKind.Relative));
                     break;
-                case "Dallas":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Dallas_Fuel_Jersey.png"));
+                case 4:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Dallas_Fuel_Jersey.png", UriKind.Relative));
                     break;
-                case "Florida":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Florida_Mayhem_Jersey.png"));
+                case 5:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Florida_Mayhem_Jersey.png", UriKind.Relative));
                     break;
-                case "Guangzhou":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Guangzhou_Charge_Jersey.png"));
+                case 6:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Guangzhou_Charge_Jersey.png", UriKind.Relative));
                     break;
-                case "Hangzhou":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Hangzhou_Spark_Jersey.png"));
+                case 7:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Hangzhou_Spark_Jersey.png", UriKind.Relative));
                     break;
-                case "Houston":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Houston_Outlaws_Jersey.png"));
+                case 8:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Houston_Outlaws_Jersey.png", UriKind.Relative));
                     break;
-                case "London":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\London_Spitfire_Jersey.png"));
+                case 9:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\London_Spitfire_Jersey.png", UriKind.Relative));
                     break;
-                case "Los Angeles Glad":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Los_Angeles_Gladiators_Jersey.png"));
+                case 10:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Los_Angeles_Gladiators_Jersey.png", UriKind.Relative));
                     break;
-                case "Los Angeles Val":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Los_Angeles_Valiant_Jersey.png"));
+                case 11:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Los_Angeles_Valiant_Jersey.png", UriKind.Relative));
                     break;
-                case "New York":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\New_York_Excelsior_Jersey.png"));
+                case 12:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\New_York_Excelsior_Jersey.png", UriKind.Relative));
                     break;
-                case "Paris":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Paris_Eternal_Jersey.png"));
+                case 13:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Paris_Eternal_Jersey.png", UriKind.Relative));
                     break;
-                case "Philadelphia":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Philadelphia_Fusion_Jersey.png"));
+                case 14:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Philadelphia_Fusion_Jersey.png", UriKind.Relative));
                     break;
-                case "San Francisco":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\San_Francisco_Shock_Jersey.png"));
+                case 15:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\San_Francisco_Shock_Jersey.png", UriKind.Relative));
                     break;
-                case "Seoul":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Seoul_Dynasty_Jersey.png"));
+                case 16:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Seoul_Dynasty_Jersey.png", UriKind.Relative));
                     break;
-                case "Shanghai":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Shanghai_Dragons_Jersey.png"));
+                case 17:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Shanghai_Dragons_Jersey.png", UriKind.Relative));
                     break;
-                case "Toronto":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Toronto_Defiant_Jersey.png"));
+                case 18:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Toronto_Defiant_Jersey.png", UriKind.Relative));
                     break;
-                case "Vancouver":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Vancouver_Titans_Jersey.png"));
+                case 19:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Vancouver_Titans_Jersey.png", UriKind.Relative));
                     break;
-                case "Washington":
-                    teamJerseys.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\jerseysTogether\Washington_Justice_Jersey.png"));
+                case 20:
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Washington_Justice_Jersey.png", UriKind.Relative));
                     break;
             }
         }

@@ -24,16 +24,16 @@ namespace OWLSimGame
             InitializeComponent();
         }
 
-        private static string teamChosen;
+        private static int teamChosen;
 
-        public static string teamChoice()
+        public static int teamChoice()
         {
             return teamChosen;
         }
         
         private void atlReignChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Atlanta";
+            teamChosen = 1;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -41,7 +41,7 @@ namespace OWLSimGame
 
         private void bstUpChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Boston";
+            teamChosen = 2;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -49,7 +49,7 @@ namespace OWLSimGame
 
         private void chgHunChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Chengdu";
+            teamChosen = 3;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -57,7 +57,7 @@ namespace OWLSimGame
 
         private void dalFueChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Dallas";
+            teamChosen = 4;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -65,7 +65,7 @@ namespace OWLSimGame
 
         private void flrMayhChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Florida";
+            teamChosen = 5;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -73,7 +73,7 @@ namespace OWLSimGame
 
         private void gzhChrgChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Guangzhou";
+            teamChosen = 6;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -81,7 +81,7 @@ namespace OWLSimGame
 
         private void hnzSprkChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Hangzhou";
+            teamChosen = 7;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -89,7 +89,7 @@ namespace OWLSimGame
 
         private void hoUOutChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Houston";
+            teamChosen = 8;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -97,7 +97,7 @@ namespace OWLSimGame
 
         private void ldnSpfChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "London";
+            teamChosen = 9;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -105,7 +105,7 @@ namespace OWLSimGame
 
         private void laGladChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Los Angeles Glad";
+            teamChosen = 10;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -113,7 +113,7 @@ namespace OWLSimGame
 
         private void laValChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Los Angeles Val";
+            teamChosen = 11;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -121,7 +121,7 @@ namespace OWLSimGame
 
         private void nyExlChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "New York";
+            teamChosen = 12;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -129,7 +129,7 @@ namespace OWLSimGame
 
         private void parEtrnChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Paris";
+            teamChosen = 13;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -137,7 +137,7 @@ namespace OWLSimGame
 
         private void phlFusChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Philadelphia";
+            teamChosen = 14;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -145,7 +145,7 @@ namespace OWLSimGame
 
         private void sfShckChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "San Francisco";
+            teamChosen = 15;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -153,7 +153,7 @@ namespace OWLSimGame
 
         private void shgDragChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Shanghai";
+            teamChosen = 17;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -161,7 +161,7 @@ namespace OWLSimGame
 
         private void solDynChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Seoul";
+            teamChosen = 16;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -169,7 +169,7 @@ namespace OWLSimGame
 
         private void trnDefChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Toronto";
+            teamChosen = 18;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -177,7 +177,7 @@ namespace OWLSimGame
 
         private void vanTitnChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Vancouver";
+            teamChosen = 19;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();
@@ -185,7 +185,7 @@ namespace OWLSimGame
 
         private void wasJusChoice(object sender, MouseButtonEventArgs e)
         {
-            teamChosen = "Washington";
+            teamChosen = 20;
             CareerPage win1 = new CareerPage();
             win1.Show();
             this.Close();

@@ -31,90 +31,89 @@ namespace OWLSimGame
 
         private void Logo()
         {
-            string team;
-
+            int team;
             team = CareerSelect.teamChoice();
             switch (team)
             {
-                case "Atlanta":
+                case 1:
                     teamID = 1;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\ATL.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\ATL.png", UriKind.Relative));
                     break;
-                case "Boston":
+                case 2:
                     teamID = 2;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\BST.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\BST.png", UriKind.Relative));
                     break;
-                case "Chengdu":
+                case 3:
                     teamID = 3;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\CNG.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\CNG.png", UriKind.Relative));
                     break;
-                case "Dallas":
+                case 4:
                     teamID = 4;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\DLS.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\DLS.png", UriKind.Relative));
                     break;
-                case "Florida":
+                case 5:
                     teamID = 5;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\FLR.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\FLR.png", UriKind.Relative));
                     break;
-                case "Guangzhou":
+                case 6:
                     teamID = 6;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\GNZ.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\GNZ.png", UriKind.Relative));
                     break;
-                case "Hangzhou":
+                case 7:
                     teamID = 7;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\HNZ.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\HNZ.png", UriKind.Relative));
                     break;
-                case "Houston":
+                case 8:
                     teamID = 8;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\HOU.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\HOU.png", UriKind.Relative));
                     break;
-                case "London":
+                case 9:
                     teamID = 9;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\LDN.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\LDN.png", UriKind.Relative));
                     break;
-                case "Los Angeles Glad":
+                case 10:
                     teamID = 10;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\LGL.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\LGL.png", UriKind.Relative));
                     break;
-                case "Los Angeles Val":
+                case 11:
                     teamID = 11;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\LVA.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\LVA.png", UriKind.Relative));
                     break;
-                case "New York":
+                case 12:
                     teamID = 12;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\NYE.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\NYE.png", UriKind.Relative));
                     break;
-                case "Paris":
+                case 13:
                     teamID = 13;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\PAR.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\PAR.png", UriKind.Relative));
                     break;
-                case "Philadelphia":
+                case 14:
                     teamID = 14;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\PHL.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\PHL.png", UriKind.Relative));
                     break;
-                case "San Francisco":
+                case 15:
                     teamID = 15;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\SFS.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\SFS.png", UriKind.Relative));
                     break;
-                case "Seoul":
-                    teamID = 16;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\SHD.png"));
-                    break;
-                case "Shanghai":
+                case 17:
                     teamID = 17;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\SLD.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\SHD.png", UriKind.Relative));
                     break;
-                case "Toronto":
+                case 16:
+                    teamID = 16;
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\SLD.png", UriKind.Relative));
+                    break;
+                case 18:
                     teamID = 18;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\TOR.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\TOR.png", UriKind.Relative));
                     break;
-                case "Vancouver":
+                case 19:
                     teamID = 19;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\VNC.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\VNC.png", UriKind.Relative));
                     break;
-                case "Washington":
+                case 20:
                     teamID = 20;
-                    badge.Source = new BitmapImage(new Uri(@"X:\NEA\Solution\leosherveyNEASolution\teamBadges\WAS.png"));
+                    badge.Source = new BitmapImage(new Uri(@"teamBadges\WAS.png", UriKind.Relative));
                     break;
             }
         }
