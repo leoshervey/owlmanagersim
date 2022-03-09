@@ -54,8 +54,9 @@
             </Button.Background>
         </Button>
         <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339"/>
-        <ListBox x:Name="leagueTable" HorizontalAlignment="Left" Height="610" Margin="1590,268,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" BorderBrush="#FF4A4C4E"/>
-        <Label x:Name="leagueTableLbl" Content="League Table" HorizontalAlignment="Left" Height="56" Margin="1590,212,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="48"/>
+        <Label x:Name="leagueTableLbl" Content="League Table" HorizontalAlignment="Left" Height="57" Margin="1590,212,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="48"/>
+        <ListBox x:Name="leagueTable" HorizontalAlignment="Left" Height="579" Margin="1590,299,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" Foreground="White" FontFamily="Koverwatch" FontSize="24" BorderBrush="#FF4A4C4E"/>
+        <Label x:Name="tpwlmd" Content="TEAM        P        W        L        MD" HorizontalAlignment="Left" Height="31" Margin="1590,268,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="24"/>
 
     </Grid>
 </Window>

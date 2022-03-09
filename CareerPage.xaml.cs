@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace OWLSimGame
 {
@@ -25,6 +26,7 @@ namespace OWLSimGame
         {
             InitializeComponent();
             Logo();
+            leagueTableDisplay();
         }
         private void Logo()
         {
@@ -147,6 +149,23 @@ namespace OWLSimGame
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             
+        }
+
+        private void leagueTableDisplay()
+        {
+            using(SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT teams.shortTeam, leaguetable.Played, leaguetable.Wins, leaguetable.Losses, leaguetable.MapDiff FROM teams, leaguetable WHERE teams.ID = leaguetable.ID ORDER BY leaguetable.Wins DESC;";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string table = (string)reader[0] + "        " + reader[1].ToString() + "        " + reader[2].ToString() + "        " + reader[3].ToString() + "        " + reader[4].ToString();
+                    leagueTable.Items.Add(table);
+                }
+                conn.Close();
+            }
         }
     }
 }

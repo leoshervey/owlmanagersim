@@ -7,43 +7,31 @@
         xmlns:SqlClient="clr-namespace:System.Data.SqlClient;assembly=System.Data.SqlClient" xmlns:VisualBasic="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic.Core" x:Class="OWLSimGame.TacticsPage"
         mc:Ignorable="d"
         Title="TacticsPage" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="White" Offset="0.037"/>
-                <GradientStop Color="#FF0C0440" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Rectangle HorizontalAlignment="Left" Height="1018" Margin="770,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="1118">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF125C6E" Offset="0.113"/>
-                    <GradientStop Color="#FF023946" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Image x:Name="hero1" HorizontalAlignment="Left" Height="114" Margin="816,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero1Choice" Source="heroes/Icon-Doomfist.png"/>
-        <Image x:Name="hero2" HorizontalAlignment="Left" Height="114" Margin="1026,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero2Choice" Source="heroes/Icon-Sombra.png"/>
-        <Image x:Name="hero3" HorizontalAlignment="Left" Height="114" Margin="1266,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero3Choice" Source="heroes/Icon-D.Va.png"/>
-        <Image x:Name="hero4" HorizontalAlignment="Left" Height="114" Margin="1495,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero4Choice" Source="heroes/Icon-Mercy.png"/>
-        <Image x:Name="hero5" HorizontalAlignment="Left" Height="114" Margin="1708,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero5Choice" Source="heroes/Icon-Lúcio.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="857,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="1067,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="1307,200,0,0" VerticalAlignment="Top" Width="46" Source="/TankIcon.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="1536,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="1749,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
-        <ListBox x:Name="Subsititues_List" HorizontalAlignment="Left" Height="442" Margin="816,540,0,0" VerticalAlignment="Top" Width="1018" Background="{x:Null}" FontFamily="Koverwatch" FontSize="36" SelectionChanged="ListBox_SelectionChanged" BorderBrush="Black"/>
-        <ListBox x:Name="Player_List" HorizontalAlignment="Left" Height="434" Margin="44,106,0,0" VerticalAlignment="Top" Width="236" Background="{x:Null}" BorderBrush="Black" FontFamily="Koverwatch" FontSize="24"/>
-        <TextBox x:Name="teamName" HorizontalAlignment="Left" Height="70" Margin="44,31,0,0" Text="Team Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Background="{x:Null}" FontFamily="Koverwatch" FontSize="60" TextAlignment="Center" BorderBrush="{x:Null}"/>
-        <TextBox x:Name="teamStrength" HorizontalAlignment="Left" Height="48" Margin="816,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Background="{x:Null}" TextAlignment="Center" FontFamily="Koverwatch" FontSize="48" Foreground="White" BorderBrush="{x:Null}"/>
+    <Grid Background="#FF4A4C4E">
+        <Rectangle HorizontalAlignment="Left" Height="654" Margin="561,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="1327" Fill="#FF2C2C2C"/>
+        <Image x:Name="hero1" HorizontalAlignment="Left" Height="114" Margin="909,263,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero1Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Doomfist.png"/>
+        <Image x:Name="hero2" HorizontalAlignment="Left" Height="118" Margin="654,267,0,0" VerticalAlignment="Top" Width="123" Stretch="Uniform" MouseLeftButtonDown="hero2Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Sombra.png"/>
+        <Image x:Name="hero3" HorizontalAlignment="Left" Height="114" Margin="1139,263,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero3Choice" Source="pack://siteoforigin:,,,/heroes/Icon-D.Va.png"/>
+        <Image x:Name="hero4" HorizontalAlignment="Left" Height="114" Margin="1400,263,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero4Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Mercy.png"/>
+        <Image x:Name="hero5" HorizontalAlignment="Left" Height="114" Margin="1686,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero5Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Lúcio.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="950,201,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="693,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
+        <Image HorizontalAlignment="Left" Height="38" Margin="1180,202,0,0" VerticalAlignment="Top" Width="46" Source="/TankIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1440,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1726,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
+        <ListBox x:Name="Player_List" HorizontalAlignment="Left" Height="655" Margin="44,106,0,0" VerticalAlignment="Top" Width="381" Background="#FF2C2C2C" BorderBrush="Black" FontFamily="Koverwatch" FontSize="36" Foreground="White"/>
+        <TextBox x:Name="teamName" HorizontalAlignment="Left" Height="70" Margin="44,31,0,0" Text="Team Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="381" Background="{x:Null}" FontFamily="Koverwatch" FontSize="60" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox x:Name="teamStrength" HorizontalAlignment="Left" Height="48" Margin="822,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Background="{x:Null}" TextAlignment="Left" FontFamily="Koverwatch" FontSize="50" Foreground="White" BorderBrush="{x:Null}"/>
         <Button Content="Back&#xA;" HorizontalAlignment="Left" Height="49" Margin="44,1000,0,0" VerticalAlignment="Top" Width="130" FontFamily="Koverwatch" FontSize="48" Click="Button_Click"/>
         <ComboBox x:Name="teamMentalities" HorizontalAlignment="Left" Height="48" Margin="1536,72,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="ComboBox_SelectionChanged_1" Text="Mentalities" FontFamily="Koverwatch" FontSize="18" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Height="70" Margin="1197,56,0,0" Text="Starting VI" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Background="{x:Null}" FontFamily="Koverwatch" FontSize="72" Foreground="White" BorderBrush="{x:Null}"/>
-        <ComboBox x:Name="dpsPlayer1" HorizontalAlignment="Left" Height="38" Margin="810,382,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="dpsPlayer1_SelectionChanged"/>
-        <ComboBox x:Name="dpsPlayer2" HorizontalAlignment="Left" Height="38" Margin="1020,382,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="dpsPlayer2_SelectionChanged" IsDropDownOpen="True"/>
-        <ComboBox x:Name="tankPlayer" HorizontalAlignment="Left" Height="38" Margin="1260,382,0,0" VerticalAlignment="Top" Width="139" IsDropDownOpen="True" SelectionChanged="tankPlayer_SelectionChanged"/>
-        <ComboBox x:Name="supportPlayer1" HorizontalAlignment="Left" Height="38" Margin="1489,382,0,0" VerticalAlignment="Top" Width="139" IsDropDownOpen="True" SelectionChanged="supportPlayer1_SelectionChanged"/>
-        <ComboBox x:Name="supportPlayer2" HorizontalAlignment="Left" Height="38" Margin="1702,382,0,0" VerticalAlignment="Top" Width="139" IsDropDownOpen="True" SelectionChanged="supportPlayer2_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="70" Margin="1065,61,0,0" Text="Starting VI" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Background="{x:Null}" FontFamily="Koverwatch" FontSize="72" Foreground="White" BorderBrush="{x:Null}"/>
+        <ComboBox x:Name="dpsPlayer1" HorizontalAlignment="Center" Height="49" Margin="0,401,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="dpsPlayer1_SelectionChanged"/>
+        <ComboBox x:Name="dpsPlayer2" HorizontalAlignment="Left" Height="49" Margin="615,401,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="dpsPlayer2_SelectionChanged" IsDropDownOpen="True"/>
+        <ComboBox x:Name="tankPlayer" HorizontalAlignment="Left" Height="49" Margin="1101,401,0,0" VerticalAlignment="Top" Width="202" IsDropDownOpen="True" SelectionChanged="tankPlayer_SelectionChanged"/>
+        <ComboBox x:Name="supportPlayer1" HorizontalAlignment="Left" Height="49" Margin="1362,401,0,0" VerticalAlignment="Top" Width="204" IsDropDownOpen="True" SelectionChanged="supportPlayer1_SelectionChanged"/>
+        <ComboBox x:Name="supportPlayer2" HorizontalAlignment="Left" Height="49" Margin="1648,401,0,0" VerticalAlignment="Top" Width="202" IsDropDownOpen="True" SelectionChanged="supportPlayer2_SelectionChanged"/>
+        <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="67,787,0,0" VerticalAlignment="Top" Width="339"/>
+        <Label Content="TEAM STRENGTH:" HorizontalAlignment="Left" Height="52" Margin="578,70,0,0" VerticalAlignment="Top" Width="239" Foreground="White" FontFamily="Koverwatch" FontSize="50"/>
 
     </Grid>
 </Window>

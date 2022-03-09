@@ -22,6 +22,38 @@
     <None Remove="DPS.png" />
     <None Remove="FLR.png" />
     <None Remove="GNZ.png" />
+    <None Remove="heroes\Icon-Ana.png" />
+    <None Remove="heroes\Icon-Ashe.png" />
+    <None Remove="heroes\Icon-Baptiste.png" />
+    <None Remove="heroes\Icon-Bastion.png" />
+    <None Remove="heroes\Icon-Brigitte.png" />
+    <None Remove="heroes\Icon-cassidy.png" />
+    <None Remove="heroes\Icon-D.Va.png" />
+    <None Remove="heroes\Icon-Doomfist.png" />
+    <None Remove="heroes\Icon-Echo.png" />
+    <None Remove="heroes\Icon-Genji.png" />
+    <None Remove="heroes\Icon-Hanzo.png" />
+    <None Remove="heroes\Icon-Junkrat.png" />
+    <None Remove="heroes\Icon-Lúcio.png" />
+    <None Remove="heroes\Icon-Mei.png" />
+    <None Remove="heroes\Icon-Mercy.png" />
+    <None Remove="heroes\Icon-Moira.png" />
+    <None Remove="heroes\Icon-Orisa.png" />
+    <None Remove="heroes\Icon-Pharah.png" />
+    <None Remove="heroes\Icon-portrait.03Fcx.png" />
+    <None Remove="heroes\Icon-portrait.0AIzO.png" />
+    <None Remove="heroes\Icon-portrait.0s4jW.png" />
+    <None Remove="heroes\Icon-portrait.24wg5.png" />
+    <None Remove="heroes\Icon-portrait.29jKn.png" />
+    <None Remove="heroes\Icon-portrait.3OBuQ.png" />
+    <None Remove="heroes\Icon-portrait.3sDqH.png" />
+    <None Remove="heroes\Icon-Roadhog.png" />
+    <None Remove="heroes\Icon-Sigma.png" />
+    <None Remove="heroes\Icon-Soldier_76.png" />
+    <None Remove="heroes\Icon-Sombra.png" />
+    <None Remove="heroes\Icon-Tracer.png" />
+    <None Remove="heroes\Icon-Wrecking_Ball.png" />
+    <None Remove="heroes\Icon-Zarya.png" />
     <None Remove="HNZ.png" />
     <None Remove="HOU.png" />
     <None Remove="Icon-Ana.png" />
@@ -106,6 +138,102 @@
     <Resource Include="background8.jpg" />
     <Resource Include="background9.jpg" />
     <Resource Include="DPS.png" />
+    <Resource Include="heroes\Icon-Ana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Ashe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Baptiste.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Bastion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Brigitte.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-cassidy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-D.Va.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Doomfist.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Echo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Genji.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Hanzo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Junkrat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Lúcio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Mei.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Mercy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Moira.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Orisa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Pharah.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.03Fcx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.0AIzO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.0s4jW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.24wg5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.29jKn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.3OBuQ.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-portrait.3sDqH.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Roadhog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Sigma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Soldier_76.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Sombra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Tracer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Wrecking_Ball.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="heroes\Icon-Zarya.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Icon-Ana.png" />
     <Resource Include="Icon-cassidy.png" />
     <Resource Include="Icon-D.Va.png" />
