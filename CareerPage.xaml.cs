@@ -119,21 +119,9 @@ namespace OWLSimGame
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //SqlConnection conn = new SqlConnection("owl_eng_db");
-            //conn.Open();
-            //SqlCommand cmd = new SqlCommand("SELECT team FROM [teams]");
-            //SqlDataReader reader = cmd.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    Console.WriteLine("{1}, {0}", reader.GetString(0), reader.GetInt32(1));
-            //}
-            //reader.Close();
-            //conn.Close();
-
-            //if (Debugger.IsAttached)
-            //{
-            //    Console.ReadLine();
-            //}
+            LeagueInformation win1 = new LeagueInformation();
+            win1.Show();
+            this.Close();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

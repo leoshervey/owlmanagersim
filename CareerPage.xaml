@@ -35,9 +35,7 @@
                 <ImageBrush ImageSource="/testbackground2.jpg"/>
             </Image.OpacityMask>
         </Image>
-        <TextBox x:Name="nextMatchDate" HorizontalAlignment="Center" Height="94" Margin="0,137,0,0" Text="Next Match&#xA;[DATE]" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" TextChanged="TextBox_TextChanged_1" Background="{x:Null}" TextAlignment="Center" FontFamily="Koverwatch" FontSize="48" BorderBrush="{x:Null}"/>
         <Button Content="Advance -&gt;" HorizontalAlignment="Left" Height="82" Margin="1628,0,0,0" VerticalAlignment="Top" Width="292" FontFamily="Koverwatch" FontSize="36" Click="Button_Click_3"/>
-        <TextBox x:Name="currentDate" HorizontalAlignment="Left" Height="52" Margin="1628,80,0,0" Text="Current Date" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" TextAlignment="Center" FontFamily="Koverwatch" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
         <Button x:Name="tactics" Content="Tactics" HorizontalAlignment="Left" Height="610" Margin="562,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_1" Foreground="White" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
@@ -57,6 +55,8 @@
         <Label x:Name="leagueTableLbl" Content="League Table" HorizontalAlignment="Left" Height="57" Margin="1590,212,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="48"/>
         <ListBox x:Name="leagueTable" HorizontalAlignment="Left" Height="579" Margin="1590,299,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" Foreground="White" FontFamily="Koverwatch" FontSize="24" BorderBrush="#FF4A4C4E"/>
         <Label x:Name="tpwlmd" Content="TEAM        P        W        L        MD" HorizontalAlignment="Left" Height="31" Margin="1590,268,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="24"/>
+        <Label x:Name="nextMatchDate" Content="NEXT MATCH&#xD;&#xA;[DATE]" HorizontalAlignment="Center" Height="104" Margin="0,137,0,0" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="Koverwatch" FontSize="48"/>
+        <Label x:Name="currDate" Content="CURRENT DATE" HorizontalAlignment="Left" Height="45" Margin="1628,80,0,0" VerticalAlignment="Top" Width="292" HorizontalContentAlignment="Center" FontFamily="Koverwatch" FontSize="36"/>
 
     </Grid>
 </Window>

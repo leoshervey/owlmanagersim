@@ -69,10 +69,10 @@ namespace OWLSimGame
                     currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SFS.png", UriKind.Relative));
                     break;
                 case 16:
-                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SHD.png", UriKind.Relative));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SLD.png", UriKind.Relative));
                     break;
                 case 17:
-                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SLD.png", UriKind.Relative));
+                    currTeam.Source = new BitmapImage(new Uri(@"teamBadges\SHD.png", UriKind.Relative));
                     break;
                 case 18:
                     currTeam.Source = new BitmapImage(new Uri(@"teamBadges\TOR.png", UriKind.Relative));
