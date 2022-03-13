@@ -9,15 +9,10 @@
         Title="TacticsPage" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
         <Rectangle HorizontalAlignment="Left" Height="654" Margin="561,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="1327" Fill="#FF2C2C2C"/>
-        <Image x:Name="hero1" HorizontalAlignment="Left" Height="114" Margin="909,263,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero1Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Doomfist.png"/>
-        <Image x:Name="hero2" HorizontalAlignment="Left" Height="118" Margin="654,267,0,0" VerticalAlignment="Top" Width="123" Stretch="Uniform" MouseLeftButtonDown="hero2Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Sombra.png"/>
-        <Image x:Name="hero3" HorizontalAlignment="Left" Height="114" Margin="1139,263,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero3Choice" Source="pack://siteoforigin:,,,/heroes/Icon-D.Va.png"/>
-        <Image x:Name="hero4" HorizontalAlignment="Left" Height="114" Margin="1400,263,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero4Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Mercy.png"/>
-        <Image x:Name="hero5" HorizontalAlignment="Left" Height="114" Margin="1686,264,0,0" VerticalAlignment="Top" Width="126" Stretch="Uniform" MouseLeftButtonDown="hero5Choice" Source="pack://siteoforigin:,,,/heroes/Icon-Lúcio.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="950,201,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
-        <Image HorizontalAlignment="Left" Height="40" Margin="693,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
-        <Image HorizontalAlignment="Left" Height="38" Margin="1180,202,0,0" VerticalAlignment="Top" Width="46" Source="/TankIcon.png"/>
-        <Image HorizontalAlignment="Left" Height="39" Margin="1440,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
+        <Image HorizontalAlignment="Center" Height="39" Margin="0,201,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="675,200,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>
+        <Image HorizontalAlignment="Left" Height="38" Margin="1202,202,0,0" VerticalAlignment="Top" Width="46" Source="/TankIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="1463,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
         <Image HorizontalAlignment="Left" Height="39" Margin="1726,200,0,0" VerticalAlignment="Top" Width="46" Source="/SupportIcon.png"/>
         <ListBox x:Name="Player_List" HorizontalAlignment="Left" Height="655" Margin="44,106,0,0" VerticalAlignment="Top" Width="381" Background="#FF2C2C2C" BorderBrush="Black" FontFamily="Koverwatch" FontSize="36" Foreground="White"/>
         <TextBox x:Name="teamName" HorizontalAlignment="Left" Height="70" Margin="44,31,0,0" Text="Team Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="381" Background="{x:Null}" FontFamily="Koverwatch" FontSize="60" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White"/>
@@ -26,12 +21,37 @@
         <ComboBox x:Name="teamMentalities" HorizontalAlignment="Left" Height="48" Margin="1536,72,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="ComboBox_SelectionChanged_1" Text="Mentalities" FontFamily="Koverwatch" FontSize="18" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Height="70" Margin="1065,61,0,0" Text="Starting VI" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Background="{x:Null}" FontFamily="Koverwatch" FontSize="72" Foreground="White" BorderBrush="{x:Null}"/>
         <ComboBox x:Name="dpsPlayer1" HorizontalAlignment="Center" Height="49" Margin="0,401,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="dpsPlayer1_SelectionChanged"/>
-        <ComboBox x:Name="dpsPlayer2" HorizontalAlignment="Left" Height="49" Margin="615,401,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="dpsPlayer2_SelectionChanged" IsDropDownOpen="True"/>
-        <ComboBox x:Name="tankPlayer" HorizontalAlignment="Left" Height="49" Margin="1101,401,0,0" VerticalAlignment="Top" Width="202" IsDropDownOpen="True" SelectionChanged="tankPlayer_SelectionChanged"/>
-        <ComboBox x:Name="supportPlayer1" HorizontalAlignment="Left" Height="49" Margin="1362,401,0,0" VerticalAlignment="Top" Width="204" IsDropDownOpen="True" SelectionChanged="supportPlayer1_SelectionChanged"/>
+        <ComboBox x:Name="dpsPlayer2" HorizontalAlignment="Left" Height="49" Margin="596,401,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="dpsPlayer2_SelectionChanged" IsDropDownOpen="True"/>
+        <ComboBox x:Name="tankPlayer" HorizontalAlignment="Left" Height="49" Margin="1119,401,0,0" VerticalAlignment="Top" Width="202" IsDropDownOpen="True" SelectionChanged="tankPlayer_SelectionChanged"/>
+        <ComboBox x:Name="supportPlayer1" HorizontalAlignment="Left" Height="49" Margin="1384,401,0,0" VerticalAlignment="Top" Width="204" IsDropDownOpen="True" SelectionChanged="supportPlayer1_SelectionChanged"/>
         <ComboBox x:Name="supportPlayer2" HorizontalAlignment="Left" Height="49" Margin="1648,401,0,0" VerticalAlignment="Top" Width="202" IsDropDownOpen="True" SelectionChanged="supportPlayer2_SelectionChanged"/>
         <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="67,787,0,0" VerticalAlignment="Top" Width="339"/>
         <Label Content="TEAM STRENGTH:" HorizontalAlignment="Left" Height="52" Margin="578,70,0,0" VerticalAlignment="Top" Width="239" Foreground="White" FontFamily="Koverwatch" FontSize="50"/>
+        <Button x:Name="hero2" Content="" HorizontalAlignment="Left" Height="113" Margin="636,264,0,0" VerticalAlignment="Top" Width="124" BorderBrush="{x:Null}" Click="hero2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Sombra.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="hero1" Content="" HorizontalAlignment="Center" Height="113" Margin="0,264,0,0" VerticalAlignment="Top" Width="124" BorderBrush="{x:Null}" Click="hero1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-cassidy.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="hero3" Content="" HorizontalAlignment="Left" Height="113" Margin="1162,264,0,0" VerticalAlignment="Top" Width="124" BorderBrush="{x:Null}" Click="hero3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Wrecking_Ball.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="hero4" Content="" HorizontalAlignment="Left" Height="113" Margin="1424,264,0,0" VerticalAlignment="Top" Width="124" BorderBrush="{x:Null}" Click="hero4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Mercy.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="hero5" Content="" HorizontalAlignment="Left" Height="113" Margin="1687,264,0,0" VerticalAlignment="Top" Width="124" BorderBrush="{x:Null}" Click="hero5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Icon-Ana.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

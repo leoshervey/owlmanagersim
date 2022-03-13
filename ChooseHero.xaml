@@ -5,45 +5,173 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="ChooseHero" Height="450" Width="800">
-    <Grid Background="#FF4A4C4E" Margin="-1,0,1,0">
-        <Image x:Name="ana" HorizontalAlignment="Left" Height="50" Margin="21,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Ana.png"/>
-        <Image x:Name="ashe" HorizontalAlignment="Left" Height="50" Margin="21,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Ashe.png"/>
-        <Image x:Name="baptiste" HorizontalAlignment="Left" Height="50" Margin="139,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Baptiste.png"/>
-        <Image x:Name="bastion" HorizontalAlignment="Left" Height="50" Margin="122,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Bastion.png"/>
-        <Image x:Name="brigitte" HorizontalAlignment="Left" Height="50" Margin="252,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Brigitte.png"/>
-        <Image x:Name="cassidy" HorizontalAlignment="Left" Height="50" Margin="227,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-cassidy.png"/>
-        <Image x:Name="dva" HorizontalAlignment="Left" Height="50" Margin="21,78,0,0" VerticalAlignment="Top" Width="50" MouseLeftButtonDown="tank_dva" Source="/heroes/Icon-D.Va.png"/>
-        <Image x:Name="doomfist" HorizontalAlignment="Left" Height="50" Margin="325,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Doomfist.png"/>
-        <Image x:Name="echo" HorizontalAlignment="Left" Height="50" Margin="427,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Echo.png"/>
-        <Image x:Name="genji" HorizontalAlignment="Left" Height="50" Margin="529,179,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Genji.png"/>
-        <Image x:Name="hanzo" HorizontalAlignment="Left" Height="50" Margin="634,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Hanzo.png"/>
-        <Image x:Name="junkrat" HorizontalAlignment="Left" Height="50" Margin="733,184,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Junkrat.png"/>
-        <Image x:Name="lucio" HorizontalAlignment="Left" Height="50" Margin="378,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Lúcio.png"/>
-        <Image x:Name="mei" HorizontalAlignment="Left" Height="50" Margin="21,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Mei.png"/>
-        <Image x:Name="mercy" HorizontalAlignment="Left" Height="50" Margin="504,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Mercy.png"/>
-        <Image x:Name="moira" HorizontalAlignment="Left" Height="50" Margin="609,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Moira.png"/>
-        <Image x:Name="orisa" HorizontalAlignment="Left" Height="50" Margin="122,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Orisa.png" MouseLeftButtonDown="tank_orisa"/>
-        <Image x:Name="pharah" HorizontalAlignment="Left" Height="50" Margin="106,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Pharah.png"/>
-        <Image x:Name="reaper" HorizontalAlignment="Left" Height="50" Margin="194,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.24wg5.png"/>
-        <Image x:Name="reinhardt" HorizontalAlignment="Left" Height="50" Margin="227,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.0s4jW.png" RenderTransformOrigin="0.499,0.481" MouseLeftButtonDown="tank_reinhardt"/>
-        <Image x:Name="roadhog" HorizontalAlignment="Left" Height="50" Margin="325,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Roadhog.png" MouseLeftButtonDown="tank_roadhog"/>
-        <Image x:Name="sigma" HorizontalAlignment="Left" Height="50" Margin="427,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Sigma.png" MouseLeftButtonDown="tank_sigma"/>
-        <Image x:Name="soldier" HorizontalAlignment="Left" Height="50" Margin="289,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Soldier_76.png"/>
-        <Image x:Name="sombra" HorizontalAlignment="Left" Height="50" Margin="378,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Sombra.png"/>
-        <Image x:Name="symmetra" HorizontalAlignment="Left" Height="50" Margin="479,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.3sDqH.png"/>
-        <Image x:Name="torbjorn" HorizontalAlignment="Left" Height="50" Margin="571,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.3OBuQ.png"/>
-        <Image x:Name="tracer" HorizontalAlignment="Left" Height="50" Margin="659,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Tracer.png"/>
-        <Image x:Name="widowmaker" HorizontalAlignment="Left" Height="50" Margin="733,245,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.29jKn.png"/>
-        <Image x:Name="winston" HorizontalAlignment="Left" Height="50" Margin="529,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.0AIzO.png" MouseLeftButtonDown="tank_winston"/>
-        <Image x:Name="wreckingball" HorizontalAlignment="Left" Height="50" Margin="634,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Wrecking_Ball.png" MouseLeftButtonDown="tank_wreckingball"/>
-        <Image x:Name="zarya" HorizontalAlignment="Left" Height="50" Margin="731,78,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-Zarya.png" MouseLeftButtonDown="tank_zarya"/>
-        <Image x:Name="zenyatta" HorizontalAlignment="Left" Height="50" Margin="733,366,0,0" VerticalAlignment="Top" Width="50" Source="/heroes/Icon-portrait.03Fcx.png"/>
+        Title="ChooseHero" Height="480" Width="820">
+    <Grid Background="#FF4A4C4E" Margin="-1,0,0,0">
         <Rectangle Height="32" Margin="20,31,0,0" VerticalAlignment="Top" Fill="#FFFA9C1D" HorizontalAlignment="Left" Width="761"/>
         <Label x:Name="tankLable" Content="TANK" HorizontalAlignment="Center" Height="29" Margin="0,31,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
         <Rectangle Height="32" Margin="21,147,0,0" VerticalAlignment="Top" Fill="#FFFA9C1D" HorizontalAlignment="Left" Width="762"/>
         <Label x:Name="tankLable_Copy" Content="damage" HorizontalAlignment="Left" Height="30" Margin="368,148,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
         <Rectangle Height="32" Margin="22,326,0,0" VerticalAlignment="Top" Fill="#FFFA9C1D" HorizontalAlignment="Left" Width="762"/>
         <Label x:Name="tankLable_Copy1" Content="SUPPORT" HorizontalAlignment="Left" Height="29" Margin="368,326,0,0" VerticalAlignment="Top" Width="69" FontFamily="Koverwatch" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsEnabled="False" FontWeight="Normal" FontStyle="Normal"/>
+        <Button x:Name="dva" Content="" HorizontalAlignment="Left" Height="45" Margin="22,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="dva_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-D.Va.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="orisa" Content="" HorizontalAlignment="Left" Height="45" Margin="123,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="orisa_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Orisa.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="reinhardt" Content="" HorizontalAlignment="Left" Height="45" Margin="227,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="reinhardt_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.0s4jW.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="roadhog" Content="" HorizontalAlignment="Left" Height="45" Margin="325,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="roadhog_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Roadhog.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="sigma" Content="" HorizontalAlignment="Left" Height="45" Margin="427,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="sigma_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Sigma.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="winston" Content="" HorizontalAlignment="Left" Height="45" Margin="529,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="winston_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.0AIzO.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="hammond" Content="" HorizontalAlignment="Left" Height="45" Margin="634,78,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="hammond_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Wrecking_Ball.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="zarya" Content="" HorizontalAlignment="Left" Height="45" Margin="735,78,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="zarya_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Zarya.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ashe" Content="" HorizontalAlignment="Left" Height="45" Margin="22,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="ashe_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Ashe.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="bastion" Content="" HorizontalAlignment="Left" Height="45" Margin="123,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="bastion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Bastion.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="cassidy" Content="" HorizontalAlignment="Left" Height="45" Margin="227,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="cassidy_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-cassidy.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="doomfist" Content="" HorizontalAlignment="Left" Height="45" Margin="325,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="doomfist_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Doomfist.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="echo" Content="" HorizontalAlignment="Left" Height="45" Margin="427,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="echo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Echo.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="genji" Content="" HorizontalAlignment="Left" Height="45" Margin="529,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="genji_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Genji.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="hanzo" Content="" HorizontalAlignment="Left" Height="45" Margin="635,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="hanzo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Hanzo.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="junkrat" Content="" HorizontalAlignment="Left" Height="45" Margin="732,184,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="junkrat_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Junkrat.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="mei" Content="" HorizontalAlignment="Left" Height="45" Margin="22,263,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="mei_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Mei.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="pharah" Content="" HorizontalAlignment="Left" Height="45" Margin="107,263,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="pharah_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Pharah.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="reaper" Content="" HorizontalAlignment="Left" Height="45" Margin="202,263,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="reaper_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.24wg5.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="soldier" Content="" HorizontalAlignment="Left" Height="45" Margin="289,263,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="soldier_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Soldier_76.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="sombra" Content="" HorizontalAlignment="Center" Height="45" Margin="0,263,0,0" VerticalAlignment="Top" Width="48" BorderBrush="{x:Null}" Click="sombra_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Sombra.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="symmetra" Content="" HorizontalAlignment="Left" Height="45" Margin="472,263,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="symmetra_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.3sDqH.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="torbjorn" Content="" HorizontalAlignment="Left" Height="45" Margin="566,263,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="torbjorn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.3OBuQ.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="tracer" Content="" HorizontalAlignment="Left" Height="45" Margin="652,263,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="tracer_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Tracer.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="widowmaker" Content="" HorizontalAlignment="Left" Height="45" Margin="732,263,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="widowmaker_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.29jKn.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ana" Content="" HorizontalAlignment="Left" Height="45" Margin="20,366,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="ana_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Ana.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="baptiste" Content="" HorizontalAlignment="Left" Height="45" Margin="132,366,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="baptiste_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Baptiste.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="brigitte" Content="" HorizontalAlignment="Left" Height="45" Margin="252,366,0,0" VerticalAlignment="Top" Width="48" BorderBrush="{x:Null}" Click="brigitte_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Brigitte.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="lucio" Content="" HorizontalAlignment="Center" Height="45" Margin="0,366,0,0" VerticalAlignment="Top" Width="48" BorderBrush="{x:Null}" Click="lucio_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Lúcio.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="mercy" Content="" HorizontalAlignment="Left" Height="45" Margin="504,366,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="mercy_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Mercy.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="moira" Content="" HorizontalAlignment="Left" Height="45" Margin="617,366,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="moira_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-Moira.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="zenyatta" Content="" HorizontalAlignment="Left" Height="45" Margin="732,366,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="zenyatta_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/heroes/Icon-portrait.03Fcx.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

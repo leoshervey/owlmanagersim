@@ -146,6 +146,11 @@ namespace OWLSimGame
             }
         }
 
+        private void heroSelection()
+        {
+
+        }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -173,36 +178,6 @@ namespace OWLSimGame
             this.Close();
         }
 
-        private void hero1Choice(object sender, MouseButtonEventArgs e)
-        {
-            ChooseHero win1 = new ChooseHero();
-            win1.Show();
-        }
-
-        private void hero2Choice(object sender, MouseButtonEventArgs e)
-        {
-            ChooseHero win1 = new ChooseHero();
-            win1.Show();
-        }
-
-        private void hero3Choice(object sender, MouseButtonEventArgs e)
-        {
-            ChooseHero win1 = new ChooseHero();
-            win1.Show();
-        }
-
-        private void hero4Choice(object sender, MouseButtonEventArgs e)
-        {
-            ChooseHero win1 = new ChooseHero();
-            win1.Show();
-        }
-
-        private void hero5Choice(object sender, MouseButtonEventArgs e)
-        {
-            ChooseHero win1 = new ChooseHero();
-            win1.Show();
-        }
-
         private void dpsPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -226,6 +201,43 @@ namespace OWLSimGame
         private void supportPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        public static int h1, h2, h3, h4, h5;
+
+        private void hero2_Click(object sender, RoutedEventArgs e)
+        {
+            int hero = 1, selection = 1;
+            ChooseHero win1 = new ChooseHero(hero, selection);
+            win1.Show();
+        }
+
+        private void hero1_Click(object sender, RoutedEventArgs e)
+        {
+            int hero = 1, selection = 2;
+            ChooseHero win1 = new ChooseHero(hero, selection);
+            win1.Show();
+        }
+
+        private void hero3_Click(object sender, RoutedEventArgs e)
+        {
+            int hero = 2, selection = 3;
+            ChooseHero win1 = new ChooseHero(hero, selection);
+            win1.Show();
+        }
+
+        private void hero4_Click(object sender, RoutedEventArgs e)
+        {
+            int hero = 3, selection = 4;
+            ChooseHero win1 = new ChooseHero(hero, selection);
+            win1.Show();
+        }
+
+        private void hero5_Click(object sender, RoutedEventArgs e)
+        {
+            int hero = 3, selection = 5;
+            ChooseHero win1 = new ChooseHero(hero, selection);
+            win1.Show();
         }
     }
 }
