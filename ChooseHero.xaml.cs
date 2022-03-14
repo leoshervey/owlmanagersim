@@ -19,11 +19,10 @@ namespace OWLSimGame
     /// </summary>
     public partial class ChooseHero : Window
     {
-        public ChooseHero(int role, int selection)
+        public ChooseHero(int role)
         {
             InitializeComponent();
             heroRole(role);
-            selectedHero(selection);
         }
 
         private int selectedSlot;
@@ -123,166 +122,257 @@ namespace OWLSimGame
         private void dva_Click(object sender, RoutedEventArgs e)
         {
             int choice = 1;
-            //selectPlayer(choice, selectedSlot);
-            TacticsPage win1 = new TacticsPage();
-            win1.Close();
-            win1.Show();
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
             this.Close();
         }
 
         private void orisa_Click(object sender, RoutedEventArgs e)
         {
             int choice = 2;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void reinhardt_Click(object sender, RoutedEventArgs e)
         {
             int choice = 3;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void roadhog_Click(object sender, RoutedEventArgs e)
         {
             int choice = 4;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void sigma_Click(object sender, RoutedEventArgs e)
         {
             int choice = 5;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void winston_Click(object sender, RoutedEventArgs e)
         {
             int choice = 6;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void hammond_Click(object sender, RoutedEventArgs e)
         {
             int choice = 7;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void zarya_Click(object sender, RoutedEventArgs e)
         {
             int choice = 8;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void ashe_Click(object sender, RoutedEventArgs e)
         {
             int choice = 9;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void bastion_Click(object sender, RoutedEventArgs e)
         {
             int choice = 10;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void cassidy_Click(object sender, RoutedEventArgs e)
         {
             int choice = 11;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void doomfist_Click(object sender, RoutedEventArgs e)
         {
             int choice = 12;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void echo_Click(object sender, RoutedEventArgs e)
         {
             int choice = 13;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void genji_Click(object sender, RoutedEventArgs e)
         {
             int choice = 14;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void hanzo_Click(object sender, RoutedEventArgs e)
         {
             int choice = 15;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void junkrat_Click(object sender, RoutedEventArgs e)
         {
             int choice = 16;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void mei_Click(object sender, RoutedEventArgs e)
         {
             int choice = 17;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void pharah_Click(object sender, RoutedEventArgs e)
         {
             int choice = 18;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void soldier_Click(object sender, RoutedEventArgs e)
         {
             int choice = 19;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void sombra_Click(object sender, RoutedEventArgs e)
         {
             int choice = 20;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void symmetra_Click(object sender, RoutedEventArgs e)
         {
             int choice = 21;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void torbjorn_Click(object sender, RoutedEventArgs e)
         {
             int choice = 22;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void tracer_Click(object sender, RoutedEventArgs e)
         {
             int choice = 23;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void widowmaker_Click(object sender, RoutedEventArgs e)
         {
             int choice = 24;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void ana_Click(object sender, RoutedEventArgs e)
         {
             int choice = 25;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void baptiste_Click(object sender, RoutedEventArgs e)
         {
             int choice = 26;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void brigitte_Click(object sender, RoutedEventArgs e)
         {
             int choice = 27;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void lucio_Click(object sender, RoutedEventArgs e)
         {
             int choice = 28;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void mercy_Click(object sender, RoutedEventArgs e)
         {
             int choice = 29;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void moira_Click(object sender, RoutedEventArgs e)
         {
             int choice = 30;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void zenyatta_Click(object sender, RoutedEventArgs e)
         {
             int choice = 31;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
 
         private void reaper_Click(object sender, RoutedEventArgs e)
         {
             int choice = 32;
+            TacticsPage tactics = new TacticsPage();
+            tactics.heroPicks(choice);
+            this.Close();
         }
     }
 }

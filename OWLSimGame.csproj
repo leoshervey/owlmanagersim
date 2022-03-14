@@ -141,9 +141,9 @@
     <Resource Include="heroes\Icon-Ana.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="heroes\Icon-Ashe.png">
+    <Content Include="heroes\Icon-Ashe.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Resource Include="heroes\Icon-Baptiste.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
