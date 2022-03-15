@@ -120,7 +120,6 @@ namespace OWLSimGame
 
         private void transferList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (transferList.)
             object playerSelected = transferList.SelectedItem;
             TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
             win1.Show();
@@ -138,7 +137,6 @@ namespace OWLSimGame
         {
             
             transferList.Items.Clear();
-            //lblTag.Content = "";
             txtBlNames.Text = "";
             txtBlTeams.Text = "";
             txtBlOverall.Text = "";

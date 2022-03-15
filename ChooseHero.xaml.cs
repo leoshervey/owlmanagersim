@@ -122,8 +122,8 @@ namespace OWLSimGame
         private void dva_Click(object sender, RoutedEventArgs e)
         {
             int choice = 1;
-            TacticsPage tactics = new TacticsPage();
-            tactics.heroPicks(choice);
+            TacticsPage tcts = new TacticsPage();
+            tcts.heroPicks(choice);
             this.Close();
         }
 

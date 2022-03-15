@@ -20,41 +20,87 @@ namespace OWLSimGame
     /// </summary>
     public partial class TacticsPage : Window
     {
+        public int ovr1, ovr2, ovr3, ovr4, ovr5;
+
         public TacticsPage()
         {
             InitializeComponent();
             nameOfTeam();
-            teamInfo();
+            damagePlayers();
+            tankPlayers();
+            supportPlayers();
         }
 
-        private void teamInfo()
+        private void damagePlayers()
         {
             int team;
-            string overallSum;
             team = CareerSelect.teamChoice();
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
             {
                 conn.Open();
-                string query = @"SELECT players.tag, roles.role FROM players, roles WHERE players.role = roles.ID AND players.teamID = @team ORDER BY roles.role DESC;";
+                string query = @"SELECT players.tag FROM players, roles WHERE players.role = roles.ID AND players.teamID = @team AND players.role = 9;";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@team", team);
                 SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string tag = (string)reader[0] + " | " + (string)reader[1];
-                    Player_List.Items.Add(tag);
-                    string query2 = @"SELECT  sum(players.overall) FROM players WHERE players.teamID = @team";
-                    SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
-                    cmd2.Parameters.AddWithValue("@team", team);
-                    SQLiteDataReader reader2 = cmd2.ExecuteReader();
-                    while (reader2.Read())
-                    {
-                        overallSum = reader2[0].ToString();
-                        teamStrength.Text = overallSum;
-                    }
+                    string listTag = (string)reader[0];
+                    string comboTag = (string)reader[0];
+                    damageList.Items.Add(listTag);
+                    dpsPlayer1.Items.Add(comboTag);
+                    dpsPlayer2.Items.Add(comboTag);
                 }
                 conn.Close();
             }
+        }
+
+        private void tankPlayers()
+        {
+            int team;
+            team = CareerSelect.teamChoice();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.tag FROM players, roles WHERE players.role = roles.ID AND players.teamID = @team AND players.role = 10;";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@team", team);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string listTag = (string)reader[0];
+                    string comboTag = (string)reader[0];
+                    tankList.Items.Add(listTag);
+                    tankPlayer.Items.Add(comboTag);
+                }
+            }
+        }
+
+        private void supportPlayers()
+        {
+            int team;
+            team = CareerSelect.teamChoice();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.tag FROM players, roles WHERE players.role = roles.ID AND players.teamID = @team AND players.role = 11;";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@team", team);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string listTag = (string)reader[0];
+                    string comboTag = (string)reader[0];
+                    supportList.Items.Add(listTag);
+                    supportPlayer1.Items.Add(comboTag);
+                    supportPlayer2.Items.Add(comboTag);
+                }
+            }
+        }
+
+        private void strengthOfTeam()
+        {
+            int totalOvr = ovr1 + ovr2 + ovr3 + ovr4 + ovr5;
+            teamStrength.Text = totalOvr.ToString();
         }
 
         private void nameOfTeam()
@@ -146,11 +192,6 @@ namespace OWLSimGame
             }
         }
 
-        private void heroSelection()
-        {
-
-        }
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -159,11 +200,6 @@ namespace OWLSimGame
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }
-
-        private void teamList()
-        {
-            //database for team list
         }
 
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
@@ -180,27 +216,82 @@ namespace OWLSimGame
 
         private void dpsPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string name = dpsPlayer1.SelectedItem.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                object temp = cmd.ExecuteScalar();
+                ovr2 = Convert.ToInt32(temp);
+                strengthOfTeam();
+                conn.Close();
+            }
         }
 
         private void dpsPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string name = dpsPlayer2.SelectedItem.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                object temp = cmd.ExecuteScalar();
+                ovr1 = Convert.ToInt32(temp);
+                strengthOfTeam();
+                conn.Close();
+            }
         }
 
         private void tankPlayer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string name = tankPlayer.SelectedItem.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                object temp = cmd.ExecuteScalar();
+                ovr3 = Convert.ToInt32(temp);
+                strengthOfTeam();
+                conn.Close();
+            }
         }
 
         private void supportPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string name = supportPlayer1.SelectedItem.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                object temp = cmd.ExecuteScalar();
+                ovr4 = Convert.ToInt32(temp);
+                strengthOfTeam();
+                conn.Close();
+            }
         }
 
         private void supportPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string name = supportPlayer2.SelectedItem.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                object temp = cmd.ExecuteScalar();
+                ovr5 = Convert.ToInt32(temp);
+                strengthOfTeam();
+                conn.Close();
+            }
         }
 
         public static int selection;
@@ -214,7 +305,7 @@ namespace OWLSimGame
                     case 9:
                         var brush = new ImageBrush();
                         brush.ImageSource = new BitmapImage(new Uri(@"heroes\Icon-Ashe.png", UriKind.Relative));
-                        hero2.Background = brush;
+                        hero2.Content = brush;
                         break;
                     case 10:
                         hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Bastion.png", UriKind.Relative));
@@ -446,6 +537,27 @@ namespace OWLSimGame
             int hero = 3;
             selection = 5;
             ChooseHero win1 = new ChooseHero(hero);
+            win1.Show();
+        }
+
+        private void Player_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object playerSelected = damageList.SelectedItem;
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
+            win1.Show();
+        }
+
+        private void tankList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object playerSelected = tankList.SelectedItem;
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
+            win1.Show();
+        }
+
+        private void supportList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object playerSelected = supportList.SelectedItem;
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
             win1.Show();
         }
     }
