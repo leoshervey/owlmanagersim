@@ -20,16 +20,18 @@ namespace OWLSimGame
     /// </summary>
     public partial class LeagueInformation : Window
     {
-        public LeagueInformation()
+        private int _week;
+        public LeagueInformation(int week)
         {
             InitializeComponent();
+            _week = week;
             Logo();
             leagueTableDisplay();
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
-            CareerPage win1 = new CareerPage();
+            CareerPage win1 = new CareerPage(_week,0);
             win1.Show();
             this.Close();
         }
@@ -105,16 +107,22 @@ namespace OWLSimGame
 
         private void leagueTableDisplay()
         {
+            int count = 0;
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
             {
                 conn.Open();
-                string query = @"SELECT teams.team, leaguetable.Played, leaguetable.Wins, leaguetable.Losses, leaguetable.MapDiff, leaguetable.MapWon, leaguetable.MapLoss, leaguetable.MapTie FROM teams, leaguetable WHERE teams.ID = leaguetable.ID ORDER BY leaguetable.Wins DESC;";
+                string query = @"SELECT teams.team, leaguetable.Played, leaguetable.Wins, leaguetable.Losses, leaguetable.MapDiff, leaguetable.MapWon, leaguetable.MapLoss, teams.ID FROM teams, leaguetable WHERE teams.ID = leaguetable.ID ORDER BY leaguetable.Wins DESC, leaguetable.MapDiff DESC, leaguetable.MapWon DESC, leaguetable.MapLoss DESC, leaguetable.Losses ASC;";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string table = (string)reader[0] + "        " + reader[1].ToString() + "        " + reader[2].ToString() + "        " + reader[3].ToString() + "        " + reader[4].ToString() + "        " + reader[5].ToString() + "        " + reader[6].ToString() + "        " + reader[7].ToString();
+                    string table = (string)reader[0] + "        " + reader[1].ToString() + "        " + reader[2].ToString() + "        " + reader[3].ToString() + "        " + reader[4].ToString() + "        " + reader[5].ToString() + "        " + reader[6].ToString();
                     bigLeagueTable.Items.Add(table);
+                    if (Convert.ToInt32(reader[5]) == CareerSelect.teamChoice())
+                    {
+                        bigLeagueTable.SelectedIndex = count;
+                    }
+                    count++;
                 }
                 conn.Close();
             }

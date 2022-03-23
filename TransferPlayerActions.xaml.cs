@@ -10,9 +10,18 @@ namespace OWLSimGame
     /// </summary>
     public partial class TransferPlayerActions : Window
     {
-        public TransferPlayerActions(string selected)
+        private int _week;
+        private bool _fromTransferMarket;
+        public TransferPlayerActions(string selected, int week, bool fromTransferMarket)
         {
             InitializeComponent();
+            _week = week;
+            _fromTransferMarket = fromTransferMarket;
+            if (_fromTransferMarket == true)
+            {
+                TransferMarket win1 = new TransferMarket(_week);
+                win1.Show();
+            }
             playerDetails(selected);
             currPlayer = selected;
         }
@@ -95,65 +104,74 @@ namespace OWLSimGame
             int overall;
             int userTeam = CareerSelect.teamChoice();
             string team;
-            int playerOffer = int.Parse(playerOfferInput.Text);
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            string playerOffer = playerOfferInput.Text;
+            int IplayerOffer;
+            if (int.TryParse(playerOffer, out IplayerOffer))
             {
-                conn.Open();
-                string query = @"SELECT players.price, players.overall, teams.team, players.tag
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+                {
+                    conn.Open();
+                    string query = @"SELECT players.price, players.overall, teams.team, players.tag
                                      FROM players, teams
                                      WHERE players.teamID = teams.ID and players.tag = @player;";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@player", currPlayer);
-                cmd.Parameters.AddWithValue("@userTeam", userTeam);
-                SQLiteDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    player = reader[3].ToString();
-                    string tempPrice = reader[0].ToString();
-                    price = Convert.ToInt32(tempPrice);
-                    string tempOverall = reader[0].ToString();
-                    overall = Convert.ToInt32(tempOverall);
-                    team = (string)reader[2];
-                    string query2 = @"SELECT avg(players.overall) FROM players";
-                    SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
-                    SQLiteDataReader reader2 = cmd2.ExecuteReader();
-                    while (reader2.Read())
+                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@player", currPlayer);
+                    cmd.Parameters.AddWithValue("@userTeam", userTeam);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
                     {
-                        string tempTotalOverall = reader2[0].ToString();
-                        double totalOverall = Convert.ToDouble(tempTotalOverall);
-                        string query4 = @"SELECT budget FROM teams WHERE ID = @id";
-                        SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
-                        cmd4.Parameters.AddWithValue("@id", userTeam);
-                        object temp = cmd4.ExecuteScalar();
-                        budget = Convert.ToInt32(temp);
-                        if (budget >= playerOffer)
+                        player = reader[3].ToString();
+                        string tempPrice = reader[0].ToString();
+                        price = Convert.ToInt32(tempPrice);
+                        string tempOverall = reader[0].ToString();
+                        overall = Convert.ToInt32(tempOverall);
+                        team = (string)reader[2];
+                        string query2 = @"SELECT avg(players.overall) FROM players";
+                        SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
+                        SQLiteDataReader reader2 = cmd2.ExecuteReader();
+                        while (reader2.Read())
                         {
-                            bool tranfser = acceptReject(playerOffer, price, overall, totalOverall);
-                            if (tranfser == true)
+                            string tempTotalOverall = reader2[0].ToString();
+                            double totalOverall = Convert.ToDouble(tempTotalOverall);
+                            string query4 = @"SELECT budget FROM teams WHERE ID = @id";
+                            SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
+                            cmd4.Parameters.AddWithValue("@id", userTeam);
+                            object temp = cmd4.ExecuteScalar();
+                            budget = Convert.ToInt32(temp);
+                            if (budget >= IplayerOffer)
                             {
-                                int newBudget = budget - Convert.ToInt32(playerOffer);
-                                Logo(userTeam);
-                                string query3 = @"UPDATE players SET teamID = @newTeam WHERE players.tag = @player;
+                                bool tranfser = acceptReject(IplayerOffer, price, overall, totalOverall);
+                                if (tranfser == true)
+                                {
+                                    int newBudget = budget - Convert.ToInt32(playerOffer);
+                                    Logo(userTeam);
+                                    string query3 = @"UPDATE players SET teamID = @newTeam WHERE players.tag = @player;
                                                         UPDATE teams SET budget = @newBudget WHERE teams.ID = @newTeam;";
-                                SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
-                                cmd3.Parameters.AddWithValue("@newTeam", userTeam);
-                                cmd3.Parameters.AddWithValue("@player", player);
-                                cmd3.Parameters.AddWithValue("@newBudget", newBudget);
-                                cmd3.ExecuteNonQuery();
+                                    SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
+                                    cmd3.Parameters.AddWithValue("@newTeam", userTeam);
+                                    cmd3.Parameters.AddWithValue("@player", player);
+                                    cmd3.Parameters.AddWithValue("@newBudget", newBudget);
+                                    cmd3.ExecuteNonQuery();
+                                }
+                                else
+                                {
+                                    playerOfferInput.Clear();
+                                    errorMessages.Content = "Not Accepted";
+                                }
                             }
                             else
                             {
-                                playerOfferInput.Clear();
-                                errorMessages.Content = "Not Accepted";
+                                errorMessages.Content = "Not Enough Funds";
                             }
                         }
-                        else
-                        {
-                            errorMessages.Content = "Not Enough Funds";
-                        }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            else
+            {
+                errorMessages.Content = "Enter a valid number";
+                playerOfferInput.Clear();
             }
         }
 

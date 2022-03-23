@@ -14,7 +14,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Button x:Name="closeGame" Content="Exit" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="143" Click="closeWindow" Margin="30,1016,0,0" RenderTransformOrigin="0.5,0.5" FontSize="24" FontFamily="Koverwatch">
+        <Button x:Name="closeGame" Content="Exit Season" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="143" Click="closeWindow" Margin="30,1016,0,0" RenderTransformOrigin="0.5,0.5" FontSize="24" FontFamily="Koverwatch">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -24,18 +24,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image x:Name="awayTeam" HorizontalAlignment="Left" Height="100" Margin="806,32,0,0" VerticalAlignment="Top" Width="110">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/testbackground2.jpg"/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="versus" HorizontalAlignment="Center" Height="104" Margin="0,28,0,0" VerticalAlignment="Top" Width="78" Source="/5246291-0002381718-Vs.pn.png"/>
-        <Image x:Name="homeTeam" HorizontalAlignment="Left" Height="100" Margin="1004,32,0,0" VerticalAlignment="Top" Width="110">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/testbackground2.jpg"/>
-            </Image.OpacityMask>
-        </Image>
-        <Button Content="Advance -&gt;" HorizontalAlignment="Left" Height="82" Margin="1628,0,0,0" VerticalAlignment="Top" Width="292" FontFamily="Koverwatch" FontSize="36" Click="Button_Click_3"/>
+        <Image x:Name="teamLogo" HorizontalAlignment="Left" Height="104" Margin="851,10,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="progress" Content="" HorizontalAlignment="Center" Height="82" Margin="0,119,0,0" VerticalAlignment="Top" Width="292" FontFamily="Koverwatch" FontSize="36" Click="Button_Click_3" Foreground="White" Background="#FF2C2C2C"/>
         <Button x:Name="tactics" Content="Tactics" HorizontalAlignment="Left" Height="610" Margin="562,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_1" Foreground="White" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/background5.jpg" Stretch="UniformToFill"/>
@@ -48,15 +38,16 @@
         </Button>
         <Button x:Name="leaguePage" Content="LEAGUE" HorizontalAlignment="Left" Height="610" Margin="1071,268,0,0" VerticalAlignment="Top" Width="488" FontFamily="Koverwatch" FontSize="72" Click="Button_Click_2" BorderBrush="{x:Null}" Foreground="White" OpacityMask="Black">
             <Button.Background>
-                <ImageBrush ImageSource="/background8.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/Blizzard-Players-Onstage.jpg" Stretch="UniformToFill" TileMode="None"/>
             </Button.Background>
         </Button>
         <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="191" Margin="50,41,0,0" VerticalAlignment="Top" Width="339"/>
         <Label x:Name="leagueTableLbl" Content="League Table" HorizontalAlignment="Left" Height="57" Margin="1590,212,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="48"/>
-        <ListBox x:Name="leagueTable" HorizontalAlignment="Left" Height="579" Margin="1590,299,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" Foreground="White" FontFamily="Koverwatch" FontSize="24" BorderBrush="#FF4A4C4E"/>
+        <ListBox x:Name="leagueTable" HorizontalAlignment="Left" Height="579" Margin="1590,299,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" Foreground="White" FontFamily="Koverwatch" FontSize="24" BorderBrush="#FF4A4C4E"  />
         <Label x:Name="tpwlmd" Content="TEAM        P        W        L        MD" HorizontalAlignment="Left" Height="31" Margin="1590,268,0,0" VerticalAlignment="Top" Width="281" Background="#FF4A4C4E" FontFamily="Koverwatch" Foreground="White" FontSize="24"/>
-        <Label x:Name="nextMatchDate" Content="NEXT MATCH&#xD;&#xA;[DATE]" HorizontalAlignment="Center" Height="104" Margin="0,137,0,0" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="Koverwatch" FontSize="48"/>
-        <Label x:Name="currDate" Content="CURRENT DATE" HorizontalAlignment="Left" Height="45" Margin="1628,80,0,0" VerticalAlignment="Top" Width="292" HorizontalContentAlignment="Center" FontFamily="Koverwatch" FontSize="36"/>
+        <Label x:Name="currDate" Content="CURRENT: " HorizontalAlignment="Center" Height="45" Margin="0,212,0,0" VerticalAlignment="Top" Width="292" HorizontalContentAlignment="Center" FontFamily="Koverwatch" FontSize="36"/>
+        <Label x:Name="userLeaguePosition" Content="Label" HorizontalAlignment="Left" Height="53" Margin="978,41,0,0" VerticalAlignment="Top" Width="104" FontFamily="Koverwatch" FontSize="48"/>
+        <Image HorizontalAlignment="Left" Height="90" Margin="1580,119,0,0" VerticalAlignment="Top" Width="300" Source="/1200px-Overwatch_League_wordmark-colour.svg.png"/>
 
     </Grid>
 </Window>

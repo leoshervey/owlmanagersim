@@ -22,9 +22,11 @@ namespace OWLSimGame
     public partial class TransferMarket : Window
     {
         int teamID;
-        public TransferMarket()
+        private int _week;
+        public TransferMarket(int week)
         {
             InitializeComponent();
+            _week = week;
             Logo();
             teamBudget();
         }
@@ -121,14 +123,14 @@ namespace OWLSimGame
         private void transferList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             object playerSelected = transferList.SelectedItem;
-            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString(),_week,true);
             win1.Show();
-
+            this.Close();
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            CareerPage win1 = new CareerPage();
+            CareerPage win1 = new CareerPage(_week,0);
             win1.Show();
             this.Close();
         }

@@ -8,14 +8,17 @@
 
   <ItemGroup>
     <None Remove="1024px-Philadelphia_Fusion_Jersey.svg.png" />
+    <None Remove="1200px-Overwatch_League_wordmark-colour.svg.png" />
     <None Remove="5246291-0002381718-Vs.pn.png" />
     <None Remove="688px-Shanghai_Dragons_logo.png" />
     <None Remove="ATL.png" />
     <None Remove="Atlanta_Reign_Jersey.png" />
+    <None Remove="background1.jpg" />
     <None Remove="background5.jpg" />
     <None Remove="background6.jpg" />
     <None Remove="background8.jpg" />
     <None Remove="background9.jpg" />
+    <None Remove="Blizzard-Players-Onstage.jpg" />
     <None Remove="BST.png" />
     <None Remove="CNG.png" />
     <None Remove="DLS.png" />
@@ -129,14 +132,17 @@
 
   <ItemGroup>
     <Resource Include="1024px-Philadelphia_Fusion_Jersey.svg.png" />
+    <Resource Include="1200px-Overwatch_League_wordmark-colour.svg.png" />
     <Resource Include="5246291-0002381718-Vs.pn.png" />
     <Resource Include="688px-Shanghai_Dragons_logo.png" />
     <Resource Include="ATL.png" />
     <Resource Include="Atlanta_Reign_Jersey.png" />
+    <Resource Include="background1.jpg" />
     <Resource Include="background5.jpg" />
     <Resource Include="background6.jpg" />
     <Resource Include="background8.jpg" />
     <Resource Include="background9.jpg" />
+    <Resource Include="Blizzard-Players-Onstage.jpg" />
     <Resource Include="DPS.png" />
     <Resource Include="heroes\Icon-Ana.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

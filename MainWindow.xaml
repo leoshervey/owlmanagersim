@@ -8,7 +8,7 @@
         Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Image HorizontalAlignment="Left" Height="1775" VerticalAlignment="Top" Width="3061" Source="/testbackground2.jpg"/>
-        <Rectangle HorizontalAlignment="Left" Height="1232" Stroke="Black" VerticalAlignment="Top" Width="2142" Opacity="0.7" Margin="-100,-79,0,0">
+        <Rectangle HorizontalAlignment="Left" Height="1232" Stroke="Black" VerticalAlignment="Top" Width="2142" Opacity="0.7" Margin="-158,-116,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="Black" Opacity="1"/>
             </Rectangle.Fill>
@@ -17,8 +17,8 @@
             </Rectangle.OpacityMask>
         </Rectangle>
         <Button x:Name="enterGame" Content="Enter Game" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="724" Click="openPage" Margin="0,502,0,0" FontFamily="Koverwatch" FontSize="48" Background="#FFCEB7A8" Foreground="#FFC95D14"/>
-        <Image HorizontalAlignment="Left" Height="401" Margin="739,96,0,0" VerticalAlignment="Top" Width="514" Source="/Overwatch_01.png.png"/>
         <Button x:Name="enterGame_Copy" Content="Exit" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="724" Click="closePage" Margin="0,610,0,0" FontFamily="Koverwatch" FontSize="48" Background="#FFCEB7A8" Foreground="#FFC95D14"/>
+        <Image HorizontalAlignment="Left" Height="334" Margin="777,152,0,0" VerticalAlignment="Top" Width="338" Source="/Overwatch_01.png.png" RenderTransformOrigin="0.519,0.525" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>

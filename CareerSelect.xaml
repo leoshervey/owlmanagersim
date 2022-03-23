@@ -8,32 +8,34 @@
         Title="CareerSelect" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/background9.jpg"/>
+            <ImageBrush ImageSource="/background9.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Rectangle HorizontalAlignment="Left" Height="1158" Stroke="Black" VerticalAlignment="Center" Width="1955" Fill="#FF4A4C4E" Opacity="0.8"/>
+        <Rectangle HorizontalAlignment="Center" Height="1158" Stroke="Black" VerticalAlignment="Center" Width="1956" Fill="#FF4A4C4E" Opacity="0.8"/>
         <Image HorizontalAlignment="Left" Height="65" Margin="80,43,0,0" VerticalAlignment="Top" Width="62"/>
-        <Image x:Name="ldnSpf" HorizontalAlignment="Left" Height="168" Margin="62,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LDN.png" MouseLeftButtonDown="ldnSpfChoice"/>
-        <Image x:Name="atlReign" HorizontalAlignment="Left" Height="169" Margin="62,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/ATL.png" MouseLeftButtonDown="atlReignChoice"/>
-        <Image x:Name="bstUpr" HorizontalAlignment="Left" Height="169" Margin="292,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/BST.png" MouseLeftButtonDown="bstUpChoice"/>
-        <Image x:Name="cngHun" HorizontalAlignment="Left" Height="169" Margin="516,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/CNG.png" MouseLeftButtonDown="chgHunChoice"/>
-        <Image x:Name="flrMay" HorizontalAlignment="Left" Height="169" Margin="978,70,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/FLR.png" Stretch="Uniform" StretchDirection="Both" MouseLeftButtonDown="flrMayhChoice"/>
-        <Image x:Name="dlsFuel" HorizontalAlignment="Left" Height="169" Margin="722,85,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/DLS.png" MouseLeftButtonDown="dalFueChoice"/>
-        <Image x:Name="gnzChrg" HorizontalAlignment="Left" Height="170" Margin="1218,97,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/GNZ.png" RenderTransformOrigin="0.517,0.476" MouseLeftButtonDown="gzhChrgChoice"/>
-        <Image x:Name="hnzSprk" HorizontalAlignment="Left" Height="170" Margin="1479,97,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/HNZ.png" RenderTransformOrigin="0.589,0.621" MouseLeftButtonDown="hnzSprkChoice"/>
-        <Image x:Name="houOut" HorizontalAlignment="Left" Height="169" Margin="1722,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/HOU.png" MouseLeftButtonDown="hoUOutChoice"/>
-        <Image x:Name="laGld" HorizontalAlignment="Left" Height="173" Margin="292,324,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LGL.png" MouseLeftButtonDown="laGladChoice"/>
-        <Image x:Name="laVal" HorizontalAlignment="Left" Height="169" Margin="516,333,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LVA.png" MouseLeftButtonDown="laValChoice"/>
-        <Image x:Name="nyExel" HorizontalAlignment="Left" Height="170" Margin="722,360,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/NYE.png" MouseLeftButtonDown="nyExlChoice"/>
-        <Image x:Name="parEtern" HorizontalAlignment="Left" Height="170" Margin="978,324,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/PAR.png" MouseLeftButtonDown="parEtrnChoice"/>
-        <Image x:Name="phlFus" HorizontalAlignment="Left" Height="168" Margin="1218,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/PHL.png" MouseLeftButtonDown="phlFusChoice"/>
-        <Image x:Name="sfShck" HorizontalAlignment="Left" Height="168" Margin="1479,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SFS.png" MouseLeftButtonDown="sfShckChoice"/>
-        <Image x:Name="shDrag" HorizontalAlignment="Left" Height="168" Margin="502,586,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SHD.png" MouseLeftButtonDown="shgDragChoice"/>
-        <Image x:Name="selDyn" HorizontalAlignment="Left" Height="167" Margin="1715,305,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SLD.png" MouseLeftButtonDown="solDynChoice"/>
-        <Image x:Name="torDefi" HorizontalAlignment="Left" Height="146" Margin="722,602,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/TOR.png" MouseLeftButtonDown="trnDefChoice"/>
-        <Image x:Name="vanTitans" HorizontalAlignment="Left" Height="168" Margin="983,591,0,0" VerticalAlignment="Top" Width="155" Source="/teamBadges/VNC.png" MouseLeftButtonDown="vanTitnChoice"/>
-        <Image x:Name="wasJust" HorizontalAlignment="Left" Height="172" Margin="1218,593,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/WAS.png" MouseLeftButtonDown="wasJusChoice"/>
-        <TextBlock HorizontalAlignment="Left" Height="174" Margin="516,842,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="858" Background="#FF535151" Foreground="White" FontFamily="Koverwatch" FontSize="20" TextAlignment="Center"><Run/><LineBreak/><Run Text="Selected team information / summary"/></TextBlock>
+        <Image x:Name="ldnSpf" HorizontalAlignment="Left" Height="168" Margin="62,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LDN.png" MouseLeftButtonDown="ldnSpfChoice" IsMouseDirectlyOverChanged="ldnInfo"/>
+        <Image x:Name="atlReign" HorizontalAlignment="Left" Height="169" Margin="62,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/ATL.png" MouseLeftButtonDown="atlReignChoice" IsMouseDirectlyOverChanged="atlInfo"/>
+        <Image x:Name="bstUpr" HorizontalAlignment="Left" Height="169" Margin="292,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/BST.png" MouseLeftButtonDown="bstUpChoice" IsMouseDirectlyOverChanged="bstInfo"/>
+        <Image x:Name="cngHun" HorizontalAlignment="Left" Height="169" Margin="516,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/CNG.png" MouseLeftButtonDown="chgHunChoice" IsMouseDirectlyOverChanged="cngInfo"/>
+        <Image x:Name="flrMay" HorizontalAlignment="Left" Height="169" Margin="978,70,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/FLR.png" Stretch="Uniform" StretchDirection="Both" MouseLeftButtonDown="flrMayhChoice" IsMouseDirectlyOverChanged="flrInfo"/>
+        <Image x:Name="dlsFuel" HorizontalAlignment="Left" Height="169" Margin="722,85,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/DLS.png" MouseLeftButtonDown="dalFueChoice" IsMouseDirectlyOverChanged="dalInfo"/>
+        <Image x:Name="gnzChrg" HorizontalAlignment="Left" Height="170" Margin="1218,97,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/GNZ.png" RenderTransformOrigin="0.517,0.476" MouseLeftButtonDown="gzhChrgChoice" IsMouseDirectlyOverChanged="gnzInfo"/>
+        <Image x:Name="hnzSprk" HorizontalAlignment="Left" Height="170" Margin="1479,97,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/HNZ.png" RenderTransformOrigin="0.589,0.621" MouseLeftButtonDown="hnzSprkChoice" IsMouseDirectlyOverChanged="hnzInfo"/>
+        <Image x:Name="houOut" HorizontalAlignment="Left" Height="169" Margin="1722,58,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/HOU.png" MouseLeftButtonDown="hoUOutChoice" IsMouseDirectlyOverChanged="houInfo"/>
+        <Image x:Name="laGld" HorizontalAlignment="Left" Height="173" Margin="292,324,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LGL.png" MouseLeftButtonDown="laGladChoice" IsMouseDirectlyOverChanged="lagInfo"/>
+        <Image x:Name="laVal" HorizontalAlignment="Left" Height="169" Margin="516,333,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/LVA.png" MouseLeftButtonDown="laValChoice" IsMouseDirectlyOverChanged="lavInfo"/>
+        <Image x:Name="nyExel" HorizontalAlignment="Left" Height="170" Margin="722,360,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/NYE.png" MouseLeftButtonDown="nyExlChoice" IsMouseDirectlyOverChanged="nyeInfo"/>
+        <Image x:Name="parEtern" HorizontalAlignment="Left" Height="170" Margin="978,324,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/PAR.png" MouseLeftButtonDown="parEtrnChoice" IsMouseDirectlyOverChanged="parInfo"/>
+        <Image x:Name="phlFus" HorizontalAlignment="Left" Height="168" Margin="1218,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/PHL.png" MouseLeftButtonDown="phlFusChoice" IsMouseDirectlyOverChanged="phlInfo"/>
+        <Image x:Name="sfShck" HorizontalAlignment="Left" Height="168" Margin="1479,315,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SFS.png" MouseLeftButtonDown="sfShckChoice" IsMouseDirectlyOverChanged="sfsInfo"/>
+        <Image x:Name="shDrag" HorizontalAlignment="Left" Height="168" Margin="502,586,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SHD.png" MouseLeftButtonDown="shgDragChoice" IsMouseDirectlyOverChanged="shgInfo"/>
+        <Image x:Name="selDyn" HorizontalAlignment="Left" Height="167" Margin="1715,305,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/SLD.png" MouseLeftButtonDown="solDynChoice" IsMouseDirectlyOverChanged="solInfo"/>
+        <Image x:Name="torDefi" HorizontalAlignment="Left" Height="146" Margin="722,602,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/TOR.png" MouseLeftButtonDown="trnDefChoice" IsMouseDirectlyOverChanged="torInfo"/>
+        <Image x:Name="vanTitans" HorizontalAlignment="Left" Height="168" Margin="983,591,0,0" VerticalAlignment="Top" Width="155" Source="/teamBadges/VNC.png" MouseLeftButtonDown="vanTitnChoice" IsMouseDirectlyOverChanged="vanInfo"/>
+        <Image x:Name="wasJust" HorizontalAlignment="Left" Height="172" Margin="1218,593,0,0" VerticalAlignment="Top" Width="156" Source="/teamBadges/WAS.png" MouseLeftButtonDown="wasJusChoice" IsMouseDirectlyOverChanged="wasInfo"/>
+        <TextBlock x:Name="infoBlock" Height="174" Margin="800,842,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF535151" Foreground="White" FontFamily="Koverwatch" FontSize="34" TextAlignment="Center" HorizontalAlignment="Left" Width="604"/>
         <Button Content="EXIT" HorizontalAlignment="Left" Height="50" Margin="36,983,0,0" VerticalAlignment="Top" Width="132" FontFamily="Koverwatch" FontSize="48" Click="Button_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="174" Margin="516,842,0,0" VerticalAlignment="Top" Width="284" Fill="#FF535151" Stroke="#FF535151"/>
+        <Image x:Name="teamJerseys" HorizontalAlignment="Left" Height="162" Margin="516,850,0,0" VerticalAlignment="Top" Width="279"/>
 
     </Grid>
 </Window>

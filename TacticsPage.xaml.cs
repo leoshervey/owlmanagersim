@@ -20,15 +20,21 @@ namespace OWLSimGame
     /// </summary>
     public partial class TacticsPage : Window
     {
-        public int ovr1, ovr2, ovr3, ovr4, ovr5;
+        public int ovr1, ovr2, ovr3, ovr4, ovr5, her1, her2, her3, her4, her5;
+        private int _week;
+        public int totalOvr = 0;
+        public bool selectedHeroes1 = false, selectedHeroes2 = false, selectedHeroes3 = false, selectedHeroes4 = false, selectedHeroes5 = false;
+        public bool selectedPlayers1 = false, selectedPlayers2 = false, selectedPlayers3 = false, selectedPlayers4 = false, selectedPlayers5 = false;
 
-        public TacticsPage()
+        public TacticsPage(int week)
         {
             InitializeComponent();
+            _week = week;
             nameOfTeam();
             damagePlayers();
             tankPlayers();
             supportPlayers();
+            teamMentalities.Visibility = Visibility.Hidden;
         }
 
         private void damagePlayers()
@@ -99,7 +105,7 @@ namespace OWLSimGame
 
         private void strengthOfTeam()
         {
-            int totalOvr = ovr1 + ovr2 + ovr3 + ovr4 + ovr5;
+            totalOvr = ovr1 + ovr2 + ovr3 + ovr4 + ovr5 + her1 + her2 + her3 + her4 + her5;
             teamStrength.Text = totalOvr.ToString();
         }
 
@@ -147,7 +153,7 @@ namespace OWLSimGame
                     break;
                 case 10:
                     teamName.Text = "Gladiators";
-                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Los_Angeles_Gladiators.png", UriKind.Relative));
+                    teamJerseys.Source = new BitmapImage(new Uri(@"jerseysTogether\Los_Angeles_Gladiators_Jersey.png", UriKind.Relative));
                     break;
                 case 11:
                     teamName.Text = "Valiant";
@@ -209,14 +215,25 @@ namespace OWLSimGame
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CareerPage win1 = new CareerPage();
-            win1.Show();
-            this.Close();
+            if ((selectedPlayers1 && selectedPlayers2 && selectedPlayers3 && selectedPlayers4 && selectedPlayers5 == true) && (selectedHeroes1 && selectedHeroes2 && selectedHeroes3 && selectedHeroes4 && selectedHeroes5 == true))
+            {
+                CareerPage win1 = new CareerPage(_week, totalOvr);
+                win1.Show();
+                this.Close();
+            }
+            else if (selectedHeroes1 == false)
+            {
+                MessageBox.Show("You must choose your heroes");
+            }
+            else
+            {
+                MessageBox.Show("You must choose your team players");
+            }
         }
 
-        private void dpsPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private int getPlayerValue(string name)
         {
-            string name = dpsPlayer1.SelectedItem.ToString();
+            int value;
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
             {
                 conn.Open();
@@ -224,74 +241,68 @@ namespace OWLSimGame
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@name", name);
                 object temp = cmd.ExecuteScalar();
-                ovr2 = Convert.ToInt32(temp);
-                strengthOfTeam();
+                value = Convert.ToInt32(temp);
                 conn.Close();
             }
+            return value;
+        }
+
+        private int getHeroValue(int ID)
+        {
+            int value;
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
+            {
+                conn.Open();
+                string query = @"SELECT heroes.Strength
+                                 FROM heroes
+                                 WHERE heroes.ID = @ID";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID", ID);
+                object temp = cmd.ExecuteScalar();
+                value = Convert.ToInt32(temp);
+                conn.Close();
+            }
+            return value;
+        }
+
+        private void dpsPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+             string name = dpsPlayer1.SelectedItem.ToString();
+             ovr2 = getPlayerValue(name);
+             selectedPlayers1 = true;
+             strengthOfTeam();
         }
 
         private void dpsPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string name = dpsPlayer2.SelectedItem.ToString();
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
-            {
-                conn.Open();
-                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@name", name);
-                object temp = cmd.ExecuteScalar();
-                ovr1 = Convert.ToInt32(temp);
-                strengthOfTeam();
-                conn.Close();
-            }
+            ovr1 = getPlayerValue(name);
+            selectedPlayers2 = true;
+            strengthOfTeam();
         }
 
         private void tankPlayer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string name = tankPlayer.SelectedItem.ToString();
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
-            {
-                conn.Open();
-                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@name", name);
-                object temp = cmd.ExecuteScalar();
-                ovr3 = Convert.ToInt32(temp);
-                strengthOfTeam();
-                conn.Close();
-            }
+            ovr3 = getPlayerValue(name);
+            selectedPlayers3 = true;
+            strengthOfTeam();
         }
 
         private void supportPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string name = supportPlayer1.SelectedItem.ToString();
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
-            {
-                conn.Open();
-                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@name", name);
-                object temp = cmd.ExecuteScalar();
-                ovr4 = Convert.ToInt32(temp);
-                strengthOfTeam();
-                conn.Close();
-            }
+            ovr4 = getPlayerValue(name);
+            selectedPlayers4 = true;
+            strengthOfTeam();
         }
 
         private void supportPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string name = supportPlayer2.SelectedItem.ToString();
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=owl_eng_db.db"))
-            {
-                conn.Open();
-                string query = @"SELECT players.overall FROM players WHERE players.tag = @name";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@name", name);
-                object temp = cmd.ExecuteScalar();
-                ovr5 = Convert.ToInt32(temp);
-                strengthOfTeam();
-                conn.Close();
-            }
+            ovr5 = getPlayerValue(name);
+            selectedPlayers5 = true;
+            strengthOfTeam();
         }
 
         public static int selection;
@@ -302,58 +313,107 @@ namespace OWLSimGame
             {
                 switch (hero)
                 {
+                    case 2:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Ashe.png", UriKind.Relative))
+                        };
+                        break;
+                    case 4:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Bastion.png", UriKind.Relative))
+                        };
+                        break;
+                    case 6:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-cassidy.png", UriKind.Relative))
+                        };
+                        break;
+                    case 8:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Doomfist.png", UriKind.Relative))
+                        };
+                        break;
                     case 9:
-                        var brush = new ImageBrush();
-                        brush.ImageSource = new BitmapImage(new Uri(@"heroes\Icon-Ashe.png", UriKind.Relative));
-                        hero2.Content = brush;
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Echo.png", UriKind.Relative))
+                        };
                         break;
                     case 10:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Bastion.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Genji.png", UriKind.Relative))
+                        };
                         break;
                     case 11:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-cassidy.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Hanzo.png", UriKind.Relative))
+                        };
                         break;
                     case 12:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Doomfist.png", UriKind.Relative));
-                        break;
-                    case 13:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Echo.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Junkrat.png", UriKind.Relative))
+                        };
                         break;
                     case 14:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Genji.png", UriKind.Relative));
-                        break;
-                    case 15:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Hanzo.png", UriKind.Relative));
-                        break;
-                    case 16:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Junkrat.png", UriKind.Relative));
-                        break;
-                    case 17:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Mei.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Mei.png", UriKind.Relative))
+                        };
                         break;
                     case 18:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Pharah.png", UriKind.Relative));
-                        break;
-                    case 19:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Soldier_76.png", UriKind.Relative));
-                        break;
-                    case 20:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Sombra.png", UriKind.Relative));
-                        break;
-                    case 21:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.3sDqH.png", UriKind.Relative));
-                        break;
-                    case 22:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.3OBuQ.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Pharah.png", UriKind.Relative))
+                        };
                         break;
                     case 23:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-Tracer.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Soldier_76.png", UriKind.Relative))
+                        };
                         break;
                     case 24:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.29jKn.png", UriKind.Relative));
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Sombra.png", UriKind.Relative))
+                        };
                         break;
-                    case 32:
-                        hero2.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.24wg5.png", UriKind.Relative));
+                    case 25:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.3sDqH.png", UriKind.Relative))
+                        };
+                        break;
+                    case 26:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.3OBuQ.png", UriKind.Relative))
+                        };
+                        break;
+                    case 27:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Tracer.png", UriKind.Relative))
+                        };
+                        break;
+                    case 28:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.29jKn.png", UriKind.Relative))
+                        };
+                        break;
+                    case 19:
+                        hero2.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.24wg5.png", UriKind.Relative))
+                        };
                         break;
                 }
             }
@@ -361,56 +421,107 @@ namespace OWLSimGame
             {
                 switch (hero)
                 {
+                    case 2:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Ashe.png", UriKind.Relative))
+                        };
+                        break;
+                    case 4:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Bastion.png", UriKind.Relative))
+                        };
+                        break;
+                    case 6:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-cassidy.png", UriKind.Relative))
+                        };
+                        break;
+                    case 8:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Doomfist.png", UriKind.Relative))
+                        };
+                        break;
                     case 9:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Ashe.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Echo.png", UriKind.Relative))
+                        };
                         break;
                     case 10:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Bastion.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Genji.png", UriKind.Relative))
+                        };
                         break;
                     case 11:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-cassidy.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Hanzo.png", UriKind.Relative))
+                        };
                         break;
                     case 12:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Doomfist.png", UriKind.Relative));
-                        break;
-                    case 13:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Echo.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Junkrat.png", UriKind.Relative))
+                        };
                         break;
                     case 14:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Genji.png", UriKind.Relative));
-                        break;
-                    case 15:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Hanzo.png", UriKind.Relative));
-                        break;
-                    case 16:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Junkrat.png", UriKind.Relative));
-                        break;
-                    case 17:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Mei.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Mei.png", UriKind.Relative))
+                        };
                         break;
                     case 18:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Pharah.png", UriKind.Relative));
-                        break;
-                    case 19:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Soldier_76.png", UriKind.Relative));
-                        break;
-                    case 20:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Sombra.png", UriKind.Relative));
-                        break;
-                    case 21:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.3sDqH.png", UriKind.Relative));
-                        break;
-                    case 22:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.3OBuQ.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Pharah.png", UriKind.Relative))
+                        };
                         break;
                     case 23:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Tracer.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Soldier_76.png", UriKind.Relative))
+                        };
                         break;
                     case 24:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.29jKn.png", UriKind.Relative));
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Sombra.png", UriKind.Relative))
+                        };
                         break;
-                    case 32:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.24wg5.png", UriKind.Relative));
+                    case 25:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.3sDqH.png", UriKind.Relative))
+                        };
+                        break;
+                    case 26:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.3OBuQ.png", UriKind.Relative))
+                        };
+                        break;
+                    case 27:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Tracer.png", UriKind.Relative))
+                        };
+                        break;
+                    case 28:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.29jKn.png", UriKind.Relative))
+                        };
+                        break;
+                    case 19:
+                        hero1.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.24wg5.png", UriKind.Relative))
+                        };
                         break;
                 }
             }
@@ -418,29 +529,53 @@ namespace OWLSimGame
             {
                 switch (hero)
                 {
-                    case 1:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-D.Va.png", UriKind.Relative));
-                        break;
-                    case 2:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Orisa.png", UriKind.Relative));
-                        break;
-                    case 3:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.0s4jW.png", UriKind.Relative));
-                        break;
-                    case 4:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Roadhog.png", UriKind.Relative));
-                        break;
-                    case 5:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Sigma.png", UriKind.Relative));
-                        break;
-                    case 6:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.0AIzO.png", UriKind.Relative));
-                        break;
                     case 7:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Wrecking_Ball.png", UriKind.Relative));
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-D.Va.png", UriKind.Relative))
+                        };
                         break;
-                    case 8:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Zarya.png", UriKind.Relative));
+                    case 17:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Orisa.png", UriKind.Relative))
+                        };
+                        break;
+                    case 20:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.0s4jW.png", UriKind.Relative))
+                        };
+                        break;
+                    case 21:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Roadhog.png", UriKind.Relative))
+                        };
+                        break;
+                    case 22:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Sigma.png", UriKind.Relative))
+                        };
+                        break;
+                    case 29:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.0AIzO.png", UriKind.Relative))
+                        };
+                        break;
+                    case 30:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Wrecking_Ball.png", UriKind.Relative))
+                        };
+                        break;
+                    case 31:
+                        hero3.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Zarya.png", UriKind.Relative))
+                        };
                         break;
                 }
             }
@@ -448,26 +583,47 @@ namespace OWLSimGame
             {
                 switch (hero)
                 {
-                    case 25:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Ana.png", UriKind.Relative));
+                    case 1:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Ana.png", UriKind.Relative))
+                        };
                         break;
-                    case 26:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Baptiste.png", UriKind.Relative));
+                    case 3:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Baptiste.png", UriKind.Relative))
+                        };
                         break;
-                    case 27:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Brigitte.png", UriKind.Relative));
+                    case 5:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Brigitte.png", UriKind.Relative))
+                        };
                         break;
-                    case 28:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Lúcio.png", UriKind.Relative));
+                    case 13:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Lúcio.png", UriKind.Relative))
+                        };
                         break;
-                    case 29:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Mercy.png", UriKind.Relative));
+                    case 15:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Mercy.png", UriKind.Relative))
+                        };
                         break;
-                    case 30:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Moira.png", UriKind.Relative));
+                    case 16:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Moira.png", UriKind.Relative))
+                        };
                         break;
-                    case 31:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.03Fcx.png", UriKind.Relative));
+                    case 32:
+                        hero4.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.03Fcx.png", UriKind.Relative))
+                        };
                         break;
                 }
             }
@@ -475,26 +631,47 @@ namespace OWLSimGame
             {
                 switch (hero)
                 {
-                    case 25:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Ana.png", UriKind.Relative));
+                    case 1:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Ana.png", UriKind.Relative))
+                        };
                         break;
-                    case 26:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Baptiste.png", UriKind.Relative));
+                    case 3:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Baptiste.png", UriKind.Relative))
+                        };
                         break;
-                    case 27:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Brigitte.png", UriKind.Relative));
+                    case 5:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Brigitte.png", UriKind.Relative))
+                        };
                         break;
-                    case 28:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Lúcio.png", UriKind.Relative));
+                    case 13:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Lúcio.png", UriKind.Relative))
+                        };
                         break;
-                    case 29:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Mercy.png", UriKind.Relative));
+                    case 15:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Mercy.png", UriKind.Relative))
+                        };
                         break;
-                    case 30:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-Moira.png", UriKind.Relative));
+                    case 16:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-Moira.png", UriKind.Relative))
+                        };
                         break;
-                    case 31:
-                        hero1.Content = new BitmapImage(new Uri(@"heroes\Icon-portrait.03Fcx.png", UriKind.Relative));
+                    case 32:
+                        hero5.Content = new Image
+                        {
+                            Source = new BitmapImage(new Uri(@"heroes\Icon-portrait.03Fcx.png", UriKind.Relative))
+                        };
                         break;
                 }
             }
@@ -504,60 +681,85 @@ namespace OWLSimGame
         {
             int hero = 1;
             selection = 1;
+            selectedHeroes1 = true;
             ChooseHero win1 = new ChooseHero(hero);
-            win1.Show();
+            win1.ShowDialog();
+            hero = Convert.ToInt32(win1.choice);
+            her1 = getHeroValue(hero);
+            strengthOfTeam();
+            heroPicks(hero);
         }
 
         private void hero1_Click(object sender, RoutedEventArgs e)
         {
             int hero = 1;
             selection = 2;
+            selectedHeroes2 = true;
             ChooseHero win1 = new ChooseHero(hero);
-            win1.Show();
+            win1.ShowDialog();
+            hero = Convert.ToInt32(win1.choice);
+            her2 = getHeroValue(hero);
+            strengthOfTeam();
+            heroPicks(hero);
         }
 
         private void hero3_Click(object sender, RoutedEventArgs e)
         {
             int hero = 2;
             selection = 3;
+            selectedHeroes3 = true;
             ChooseHero win1 = new ChooseHero(hero);
-            win1.Show();
+            win1.ShowDialog();
+            hero = Convert.ToInt32(win1.choice);
+            her3 = getHeroValue(hero);
+            strengthOfTeam();
+            heroPicks(hero);
         }
 
         private void hero4_Click(object sender, RoutedEventArgs e)
         {
             int hero = 3;
             selection = 4;
+            selectedHeroes4 = true;
             ChooseHero win1 = new ChooseHero(hero);
-            win1.Show();
+            win1.ShowDialog();
+            hero = Convert.ToInt32(win1.choice);
+            her4 = getHeroValue(hero);
+            strengthOfTeam();
+            heroPicks(hero);
         }
 
         private void hero5_Click(object sender, RoutedEventArgs e)
         {
             int hero = 3;
             selection = 5;
+            selectedHeroes5 = true;
             ChooseHero win1 = new ChooseHero(hero);
-            win1.Show();
+            win1.ShowDialog();
+            hero = Convert.ToInt32(win1.choice);
+            her5 = getHeroValue(hero);
+            strengthOfTeam();
+            heroPicks(hero);
         }
 
         private void Player_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             object playerSelected = damageList.SelectedItem;
-            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString(),_week,false);
             win1.Show();
         }
 
         private void tankList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             object playerSelected = tankList.SelectedItem;
-            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString(), _week, false);
             win1.Show();
         }
 
         private void supportList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             object playerSelected = supportList.SelectedItem;
-            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString());
+            TransferPlayerActions win1 = new TransferPlayerActions(playerSelected.ToString(), _week, false);
             win1.Show();
         }
     }
