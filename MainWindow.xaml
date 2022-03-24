@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="MainWindow" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Image HorizontalAlignment="Left" Height="1775" VerticalAlignment="Top" Width="3061" Source="/testbackground2.jpg"/>
         <Rectangle HorizontalAlignment="Left" Height="1232" Stroke="Black" VerticalAlignment="Top" Width="2142" Opacity="0.7" Margin="-158,-116,0,0">

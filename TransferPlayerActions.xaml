@@ -29,9 +29,9 @@
         <Label x:Name="ldrshpLbl" Content="" HorizontalAlignment="Left" Height="42" Margin="10,364,0,0" VerticalAlignment="Top" Width="43" FontFamily="Koverwatch" Foreground="White" FontSize="24" Background="#FF2C2C2C"/>
         <Label x:Name="overallLbl" Content="" HorizontalAlignment="Left" Height="42" Margin="178,176,0,0" VerticalAlignment="Top" Width="43" FontFamily="Koverwatch" Foreground="White" FontSize="24" Background="#FF2C2C2C"/>
         <Label x:Name="priceLbl" Content="" HorizontalAlignment="Left" Height="32" Margin="213,129,0,0" VerticalAlignment="Top" Width="193" FontFamily="Koverwatch" Foreground="White" FontSize="24" Background="#FF2C2C2C"/>
-        <Button x:Name="buyButton" Content="Negotiate to Buy" Margin="557,368,0,0" Background="#FF2C2C2C" FontFamily="Koverwatch" Foreground="#FFFA9C1D" FontSize="24" Click="buyButton_Click" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="193"/>
+        <Button x:Name="buyButton" Content="Negotiate to Buy" Margin="557,368,50,34" Background="#FF2C2C2C" FontFamily="Koverwatch" Foreground="#FFFA9C1D" FontSize="24" Click="buyButton_Click"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="412,60,0,0" Text="Role Played" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" FontFamily="Koverwatch" Foreground="White" FontSize="22"/>
-        <TextBox x:Name="playerOfferInput" HorizontalAlignment="Left" Height="25" Margin="557,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Background="#FF2C2C2C" FontSize="24" FontFamily="Koverwatch" Foreground="White" TextAlignment="Center"/>
+        <TextBox x:Name="playerOfferInput" Margin="557,338,50,71" TextWrapping="Wrap" Background="#FF2C2C2C" FontSize="24" FontFamily="Koverwatch" Foreground="White" TextAlignment="Center"/>
         <Label x:Name="errorMessages" Content="" HorizontalAlignment="Left" Margin="557,308,0,0" VerticalAlignment="Top" Height="25" RenderTransformOrigin="0.5,0.5" Width="193" Foreground="White" FontFamily="Koverwatch" FontSize="18">
             <Label.RenderTransform>
                 <TransformGroup>

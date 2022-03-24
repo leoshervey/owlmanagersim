@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OWLSimGame"
         xmlns:SqlClient="clr-namespace:System.Data.SqlClient;assembly=System.Data.SqlClient" xmlns:VisualBasic="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic.Core" x:Class="OWLSimGame.TacticsPage"
         mc:Ignorable="d"
-        Title="TacticsPage" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="TacticsPage" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
         <Rectangle HorizontalAlignment="Left" Height="654" Margin="561,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="1327" Fill="#FF2C2C2C"/>
         <Image HorizontalAlignment="Center" Height="39" Margin="0,201,0,0" VerticalAlignment="Top" Width="46" Source="/DPS.png"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="CareerSelect" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="CareerSelect" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/background9.jpg" Stretch="UniformToFill"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="CareerPage" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="CareerPage" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid x:Name="bG">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="LeagueInformation" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="LeagueInformation" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
         <Button x:Name="backButton" Content="BACK" HorizontalAlignment="Left" Height="51" Margin="10,1019,0,0" VerticalAlignment="Top" Width="91" Foreground="White" FontFamily="Koverwatch" FontSize="48" Background="#FF2C2C2C" Click="backButton_Click"/>
         <ListBox x:Name="bigLeagueTable" HorizontalAlignment="Center" Height="916" Margin="0,98,0,0" VerticalAlignment="Top" Width="1900" Background="#FF2C2C2C" BorderBrush="#FF2C2C2C" Foreground="White" FontFamily="Koverwatch" FontSize="42"/>

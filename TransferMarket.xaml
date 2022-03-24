@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="TransferMarket" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="TransferMarket" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
         <ListBox x:Name="transferList" Margin="25,402,1646,18" Background="#FF2C2C2C" SelectionChanged="transferList_SelectionChanged" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontFamily="Koverwatch"/>
         <Image x:Name="badge" Height="135" Margin="892,26,892,0" VerticalAlignment="Top" Source="/teamBadges/LDN.png" IsEnabled="False"/>

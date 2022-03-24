@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OWLSimGame"
         mc:Ignorable="d"
-        Title="GameplayScreen" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+        Title="GameplayScreen" Height="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}" Width="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}" WindowState="Maximized" WindowStyle="None">
     <Grid Background="#FF4A4C4E">
         <Label x:Name="label1" HorizontalAlignment="Center" Height="62" Margin="0,297,0,0" VerticalAlignment="Top" Width="1218" FontSize="48" Foreground="White" FontFamily="Koverwatch" HorizontalContentAlignment="Center" Background="#FF2C2C2C"/>
         <Button x:Name="back" Content="EXIT MATCHDAY" HorizontalAlignment="Center" Height="60" Margin="0,1006,0,0" VerticalAlignment="Top" Width="180" Click="back_Click" FontFamily="Koverwatch" FontSize="36" Background="#FF2C2C2C" Foreground="White"/>
