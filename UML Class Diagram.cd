@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OWLSimGame.TransferMarket">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEQCAAAAAAAAACAAAAAAAAAgAAgAAAAAECAAAAAA=</HashCode>
+      <FileName>TransferMarket.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.Gameplay">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAQQAAAACAAACAAAAAIAAgAEAAAAACAAAA=</HashCode>
+      <FileName>Gameplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OWLSimGame.CareerPage">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQgAAAARAAAABAAAAAEEAAAAAAAQDAAACBIAAAQ=</HashCode>
+      <FileName>CareerPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.CareerSelect">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EhQQBEAAAIUQCEAQgAEpAglIAI6AAAAAAJgABQgAQmM=</HashCode>
+      <FileName>CareerSelect.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.ChooseHero">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAFAEAECAgAAEDBhgAEEAAoxEAACAwEwEAAABECBQE=</HashCode>
+      <FileName>ChooseHero.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.GameplayScreen">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAABAAgAAAAAAAAAAAIgAAA=</HashCode>
+      <FileName>GameplayScreen.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.LeagueInformation">
+    <Position X="5.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEQAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>LeagueInformation.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.TacticsPage">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAEAgRABCAgACAAgAAAE2DIJACAAAEEBJBAJbRBwQ=</HashCode>
+      <FileName>TacticsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OWLSimGame.TransferPlayerActions">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEQAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAEAAABI=</HashCode>
+      <FileName>TransferPlayerActions.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
